@@ -3,17 +3,6 @@
  *
  * SPDX-License-Identifier: MIT
  */
-/*
-                lower_layer {
-                        bindings = <
-        &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans
-        &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans
-        &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans
-                   &trans     &trans     &trans     &trans     &trans     &trans
-                        >;
-                };
-  */
-
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 
@@ -29,7 +18,6 @@
             bindings = <&kp>, <&kp>;
         };
     };
-
     keymap {
                 compatible = "zmk,keymap";
 
@@ -39,17 +27,17 @@
         &lt 2 ESC      &hm LGUI A &hm LALT S  &hm LSHFT D &hm LCTRL F &lt 3 G      &kp H       &hm LCTRL J &hm LSHFT K    &hm LALT  L  &kp SQT       &kp SQT
         &kp LC(SPACE)  &kp Z      &kp X       &kp C       &kp V       &kp B        &kp N       &kp M       &kp COMMA      &kp DOT      &kp FSLH      &kp ESC
                        &kp BSPC   &lt 1 SPACE &kp RET     &kp RET     &lt 1 SPACE  &lt 4 SPACE
-                        >;
-                };
+        >;
+        };
 
                 symbol_layer { // layer 1
                         bindings = <
-        &trans     &kp EXCL   &kp AT     &kp HASH   &kp DOLLAR &kp PRCNT  &kp AMPS   &kp LBRC   &kp LPAR   &kp RPAR   &kp RBRC   &trans     
-        &trans     &kp EQUAL  &kp PLUS   &kp STAR   &kp CARET  &kp trans  &kp TILDE  &kp SLASH  &kp BSLH   &kp QMARK  &kp GRAVE  &trans     
-        &trans     &trans     &trans     &trans     &trans     &trans     &trans     &kp UNDER  &trans     &trans     &trans     &trans     
+        &trans     &kp EXCL   &kp AT     &kp HASH   &kp DOLLAR &kp PRCNT  &kp AMPS   &kp LBRC   &kp LPAR   &kp RPAR   &kp RBRC   &trans
+        &trans     &kp EQUAL  &kp PLUS   &kp STAR   &kp CARET  &trans     &kp TILDE  &kp SLASH  &kp BSLH   &kp QMARK  &kp GRAVE  &trans
+        &trans     &trans     &trans     &trans     &trans     &trans     &trans     &kp UNDER  &trans     &trans     &trans     &trans
                    &kp DEL    &trans     &trans     &trans     &trans     &trans  
-                        >;
-                };
+        >;
+        };
 
                 function_layer {// layer 2
                         bindings = <
@@ -57,8 +45,8 @@
         &trans     &trans     &trans     &kp LSHFT  &kp LCTRL  &trans     &kp LEFT   &kp DOWN   &kp UP     &kp RIGHT  &trans     &trans
         &trans     &trans     &trans     &trans     &trans     &kp LC(LEFT) &kp DOWN &trans     &trans     &trans     &trans     &trans
                    &trans     &trans     &trans     &trans     &trans     &trans
-                        >;
-                };
+        >;
+        };
 
                 sec_sym_layer {// layer 3
                         bindings = <
@@ -66,8 +54,8 @@
         &trans     &trans     &trans     &trans     &trans     &trans     &trans     &kp PIPE   &kp SEMI   &kp COLON  &trans     &trans
         &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans
                    &trans     &trans     &trans     &trans     &trans     &trans
-                        >;
-                };
+        >;
+        };
 
                 num_layer {// layer 4
                         bindings = <
@@ -75,7 +63,7 @@
         &trans     &trans     &trans     &trans     &trans     &trans     &trans     &kp N1    &kp N2   &kp N3     &trans     &trans
         &trans     &trans     &trans     &trans     &trans     &trans     &trans     &kp N4    &kp N5   &kp N6     &trans     &trans
                    &trans     &trans     &trans     &trans     &trans     &trans
-                        >;
-                };
+        >;
         };
+    };
 };
