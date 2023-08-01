@@ -34,7 +34,6 @@
                 compatible = "zmk,keymap";
 
                 default_layer { // layer 0
-//  note to self: 1=symbols, 2=function, 3=symbols two, 4=numbers 
                         bindings = <
         &kp TAB        &kp Q      &lt 1 W     &kp E       &kp R       &kp T        &kp Y       &kp U       &kp I          &kp O        &kp P         &kp BSPC
         &lt 2 ESC      &hm LGUI A &hm LALT S  &hm LSHFT D &hm LCTRL F &lt 3 G      &kp H       &hm LCTRL J &hm LSHFT K    &hm LALT  L  &kp SQT       &kp SQT
@@ -54,16 +53,16 @@
 
                 function_layer {// layer 2
                         bindings = <
-        &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans
-        &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans
-        &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans
+        &trans     &trans     &trans     &kp LC(RIGHT) &trans  &trans     &trans     &trans     &trans     &trans     &kp UP     &trans
+        &trans     &trans     &trans     &kp LSHFT  &kp LCTRL  &trans     &kp LEFT   &kp DOWN   &kp UP     &kp RIGHT  &trans     &trans
+        &trans     &trans     &trans     &trans     &trans     &kp LC(LEFT) &kp DOWN &trans     &trans     &trans     &trans     &trans
                    &trans     &trans     &trans     &trans     &trans     &trans
                         >;
                 };
 
                 sec_sym_layer {// layer 3
                         bindings = <
-        &trans     &trans     &trans     &trans     &trans     &trans     &trans     &LT        &kp LBKT   &RBKT      &kp GT     &trans
+        &trans     &trans     &trans     &trans     &trans     &trans     &trans     &kp LT     &kp LBKT   &kp RBKT   &kp GT     &trans
         &trans     &trans     &trans     &trans     &trans     &trans     &trans     &kp PIPE   &kp SEMI   &kp COLON  &trans     &trans
         &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans
                    &trans     &trans     &trans     &trans     &trans     &trans
