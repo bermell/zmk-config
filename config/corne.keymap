@@ -48,7 +48,7 @@
                 symbol_layer { // layer 2
                         bindings = <
         &trans     &kp EXCL   &kp AT     &kp HASH   &kp DOLLAR &kp PRCNT  &kp AMPS   &kp LBRC   &kp LPAR   &kp RPAR   &kp RBRC   &trans
-        &CAPS      &kp EQUAL  &kp PLUS   &kp STAR   &kp CARET  &trans     &kp TILDE  &kp SLASH  &kp BSLH   &kp QMARK  &kp GRAVE  &trans
+        &kp CAPS      &kp EQUAL  &kp PLUS   &kp STAR   &kp CARET  &trans     &kp TILDE  &kp SLASH  &kp BSLH   &kp QMARK  &kp GRAVE  &trans
         &trans     &trans     &trans     &trans     &trans     &trans     &trans     &kp UNDER  &trans     &trans     &trans     &trans
                    &trans     &kp DEL     &trans     &trans     &trans  &trans  
         >;
