@@ -62,7 +62,7 @@
         &kp TAB       &kp Q    &lt Num W   &kp E       &kp R       &kp T       &kp Y       &kp U       &kp I       &kp O      &kp P     &kp LG(N1)
         &lt Nav ESC   &kp A    &lm LALT S  &lm LSHFT D &lm LCTRL F &lt 3 G     &kp H       &rm LCTRL J &rm LSHFT K &rm LALT L &kp SQT   &kp LG(N2)
         &kp LC(SPACE) &kp Z    &kp X       &kp C       &kp V       &kp B       &kp N       &kp M       &kp COMMA   &kp DOT    &kp MINUS &tog Qwerty
-                      &lt Fun SPACE   &lm LSHFT BSPC   &kp SPACE    &lt Sym RET     &lt Num SPACE    &kp LGUI
+                      &trans &trans   &trans      &trans      &trans      &trans          
         >;
         };
 
