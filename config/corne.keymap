@@ -38,6 +38,14 @@
             hold-trigger-key-positions = <1 2 3 4 5 6 13 14 15 16 17 18 25 26 27 28 29 30>;
         };
 
+        ltsk: layer_toogle_sticky_key {
+            compatible = "zmk,behavior-hold-tap"; 
+            label = "SOMETHING";
+            #binding-cells = <2>;
+            tapping-term-ms = <300>; 
+            bindings = <&mo>, <&sk>;
+          };
+
     };
     keymap {
                 compatible = "zmk,keymap";
@@ -46,7 +54,7 @@
         &kp TAB       &kp Q     &kp W      &kp F       &kp P       &kp B  /**/  &kp J      &kp L       &kp U        &kp Y       &kp SQT      &kp LG(N1)
         &lt Nav ESC   &kp A     &lm LALT R &lm LSHFT S &lm LCTRL T &kp G  /**/  &kp M      &rm LCTRL N &rm LSHFT E  &rm LALT I  &kp O        &kp LG(N2)
         &kp LC(SPACE) &kp Z     &kp X      &kp C       &kp D       &kp V  /**/  &kp K      &kp H       &kp COMMA    &kp DOT     &kp MINUS    &tog Qwerty 
-        &lt Fun SPACE           &lm LSHFT BSPC         &kp SPACE          /**/  &lt Sym RET            &lt Num SPACE            &kp LGUI
+        &ltsk Fun LSHFT         &lm LSHFT BSPC         &kp SPACE          /**/  &lt Sym RET            &lt Num SPACE            &kp LGUI
         >;
         };
                 qwerty_layer { // layer 1
