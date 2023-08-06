@@ -24,7 +24,7 @@
             quick-tap-ms = <0>;
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
-            hold-trigger-key-positions = <7 8 9 10 11 12 19 20 21 22 23 24 31 32 33 34 35 36>;
+            hold-trigger-key-positions = <7 8 9 10 11 12 19 20 21 22 23 24 31 32 33 34 35 36 37 38 39 40 41 42>;
         };
 
         rm: right_hand_homerow_mods {
@@ -35,7 +35,7 @@
             quick-tap-ms = <0>;
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
-            hold-trigger-key-positions = <1 2 3 4 5 6 13 14 15 16 17 18 25 26 27 28 29 30>;
+            hold-trigger-key-positions = <1 2 3 4 5 6 13 14 15 16 17 18 25 26 27 28 29 30 37 38 39 40 41 42>;
         };
 
         ltsk: layer_toogle_sticky_key {
@@ -51,16 +51,16 @@
                 compatible = "zmk,keymap";
                 default_layer {// layer 0
                         bindings = <
-        &kp TAB       &kp Q     &kp W      &kp F       &kp P       &kp B  /**/  &kp J      &kp L       &kp U        &kp Y       &kp SQT      &kp LG(N1)
-        &lt Nav ESC   &kp A     &lm LALT R &lm LSHFT S &lm LCTRL T &kp G  /**/  &kp M      &rm LCTRL N &rm LSHFT E  &rm LALT I  &kp O        &kp LG(N2)
-        &kp LC(SPACE) &kp Z     &kp X      &kp C       &kp D       &kp V  /**/  &kp K      &kp H       &kp COMMA    &kp DOT     &kp MINUS    &tog Qwerty 
-        &ltsk Fun LSHFT         &lm LSHFT BSPC         &kp SPACE          /**/  &lt Sym RET            &lt Num SPACE            &kp LGUI
+        &kp TAB       &kp Q     &kp W      &kp F       &kp P       &kp B     /**/  &kp J      &kp L       &kp U        &kp Y       &kp SQT      &kp LG(N1)
+        &lt Nav ESC   &kp A     &lm LALT R &lm LSHFT S &lm LCTRL T &lt SSy G /**/  &kp M      &rm LCTRL N &rm LSHFT E  &rm LALT I  &kp O        &kp LG(N2)
+        &kp LC(SPACE) &kp Z     &kp X      &kp C       &kp D       &kp V     /**/  &kp K      &kp H       &kp COMMA    &kp DOT     &kp MINUS    &tog Qwerty 
+        &ltsk Fun LSHFT         &lt Num BSPC           &kp SPACE             /**/  &lt Sym RET            &lt Num SPACE            &kp LGUI
         >;
         };
                 qwerty_layer { // layer 1
                         bindings = <
         &kp TAB       &kp Q    &lt Num W   &kp E       &kp R       &kp T       &kp Y       &kp U       &kp I       &kp O      &kp P     &kp LG(N1)
-        &lt Nav ESC   &kp A    &lm LALT S  &lm LSHFT D &lm LCTRL F &lt 3 G     &kp H       &rm LCTRL J &rm LSHFT K &rm LALT L &kp SQT   &kp LG(N2)
+        &lt Nav ESC   &kp A    &lm LALT S  &lm LSHFT D &lm LCTRL F &trans      &kp H       &rm LCTRL J &rm LSHFT K &rm LALT L &kp SQT   &kp LG(N2)
         &kp LC(SPACE) &kp Z    &kp X       &kp C       &kp V       &kp B       &kp N       &kp M       &kp COMMA   &kp DOT    &kp MINUS &tog Qwerty
                       &trans &trans   &trans      &trans      &trans      &trans          
         >;
@@ -95,10 +95,10 @@
 
                 num_layer {// layer 5
                         bindings = <
-        &trans     &trans     &trans     &trans     &trans     &trans     &trans     &kp N7    &kp N8   &kp N9     &trans     &trans
-        &trans     &trans     &trans     &trans     &trans     &trans     &trans     &kp N1    &kp N2   &kp N3     &trans     &trans
+        &trans     &trans     &trans     &trans     &trans     &trans     &trans     &kp N7    &kp N8   &kp N9     &trans     &kp LG(N3)
+        &trans     &trans     &trans     &trans     &trans     &trans     &trans     &kp N1    &kp N2   &kp N3     &kp N0     &kp LG(N4)
         &trans     &trans     &trans     &trans     &trans     &trans     &trans     &kp N4    &kp N5   &kp N6     &trans     &trans
-                   &trans     &trans     &kp 0       &kp 0       &trans     &trans
+                   &trans     &trans     &kp 0      &kp 0      &trans     &trans
         >;
         };
                 fun_layer {// layer 6
