@@ -38,27 +38,6 @@
             hold-trigger-key-positions = <1 2 3 4 5 6 13 14 15 16 17 18 25 26 27 28 29 30 37 38 39 40 41 42>;
         };
 
-        lly: left_hand_layer {
-            compatible = "zmk,behavior-hold-tap";
-            label = "HOMEROW_MODS";
-            #binding-cells = <2>;
-            tapping-term-ms = <300>;    // <---[[moderate duration]]
-            quick-tap-ms = <0>;
-            flavor = "tap-preferred";
-            bindings = <&mo>, <&kp>;
-            hold-trigger-key-positions = <7 8 9 10 11 12 19 20 21 22 23 24 31 32 33 34 35 36 37 38 39 40 41 42>;
-        };
-
-        rly: right_hand_layer {
-            compatible = "zmk,behavior-hold-tap";
-            label = "HOMEROW_MODS";
-            #binding-cells = <2>;
-            tapping-term-ms = <300>;    // <---[[moderate duration]]
-            quick-tap-ms = <0>;
-            flavor = "tap-preferred";
-            bindings = <&mo>, <&kp>;
-            hold-trigger-key-positions = <1 2 3 4 5 6 13 14 15 16 17 18 25 26 27 28 29 30 37 38 39 40 41 42>;
-        };
         ltsk: layer_toogle_sticky_key {
             compatible = "zmk,behavior-hold-tap"; 
             label = "SOMETHING";
@@ -74,7 +53,7 @@
                         bindings = <
         &kp TAB       &kp Q     &kp W      &kp F       &kp P       &kp B     /**/  &kp J      &kp L       &kp U        &kp Y       &kp SQT      &kp LG(N1)
         &lt Nav ESC   &kp A     &lm LALT R &lm LSHFT S &lm LCTRL T &lt SSy G /**/  &kp M      &rm LCTRL N &rm LSHFT E  &rm LALT I  &kp O        &kp LG(N2)
-        &kp LC(SPACE) &kp Z     &kp X      &kp C       &lly Sym D  &kp V     /**/  &kp K      &rly Sym H  &kp COMMA    &kp DOT     &kp MINUS    &tog Qwerty 
+        &kp LC(SPACE) &kp Z     &kp X      &kp C       &lt Sym D  &kp V     /**/  &kp K      &lt Sym H  &kp COMMA    &kp DOT     &kp MINUS    &tog Qwerty 
         &ltsk Fun LSHFT         &lt Num BSPC           &kp SPACE             /**/  &lt Sym RET            &ltsk Num LSHFT          &kp LGUI
         >;
         };
