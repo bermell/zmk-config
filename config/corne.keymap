@@ -14,7 +14,28 @@
 #define Num 5
 #define Fun 6
 
+&sk {
+    release-after-ms = <2000>;
+    quick-release;
+    /delete-property/ ignore-modifiers;
+};
+
 / {
+    combos {
+        compatible = "zmk,combos";
+
+        combo_k { 
+            timeout-ms = <50>;
+            key-positions = <32 33>;
+            bindings = <&kp K>;
+        };
+
+        combo_v { 
+            timeout-ms = <50>;
+            key-positions = <28 29>;
+            bindings = <&kp V>;
+        };
+    };
     behaviors {
         lm: left_hand_homerow_mods {
             compatible = "zmk,behavior-hold-tap";
@@ -70,7 +91,7 @@
                 symbol_layer { // layer 2
                         bindings = <
         &trans     &kp EXCL   &kp AT     &kp HASH   &kp DOLLAR &kp PRCNT  &kp AMPS   &kp LBRC   &kp LPAR   &kp RPAR   &kp RBRC   &trans
-        &kp CAPS      &kp EQUAL  &kp PLUS   &kp STAR   &kp CARET  &trans     &kp TILDE  &kp SLASH  &kp BSLH   &kp QMARK  &kp GRAVE  &trans
+        &kp CAPS   &kp EQUAL  &kp PLUS   &kp STAR   &kp CARET  &trans     &kp TILDE  &kp SLASH  &kp BSLH   &kp QMARK  &kp GRAVE  &trans
         &trans     &trans     &trans     &trans     &trans     &trans     &trans     &kp UNDER  &trans     &trans     &trans     &trans
                    &trans     &kp DEL     &trans     &trans     &trans  &trans  
         >;
