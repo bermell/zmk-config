@@ -18,7 +18,6 @@
     quick-release;
     /delete-property/ ignore-modifiers;
 };
-n
 
 / {
     combos {
