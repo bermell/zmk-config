@@ -16,31 +16,34 @@
 &sk {
     release-after-ms = <2000>;
     quick-release;
-    /delete-property/ ignore-modifiers;
 };
+
+&sl {
+    release-after-ms = <2000>;
+  };
 
 / {
     combos {
         compatible = "zmk,combos";
         combo_k { 
             timeout-ms = <50>;
-            key-positions = <19 20>;
+            key-positions = <19 20>; // N+E 
             bindings = <&kp K>;
         };
 
         combo_v { 
             timeout-ms = <50>;
-            key-positions = <15 16>;
+            key-positions = <15 16>; // S+T 
             bindings = <&kp V>;
         };
         combo_sticky_sym_right {
             timeout-ms = <50>;
-            key-positions = <19 39>;
+            key-positions = <19 39>; // Ret+N
             bindings = <&sl Sym>;
         };
         combo_sticky_sym_left {
             timeout-ms = <50>;
-            key-positions = <16 38>;
+            key-positions = <16 38>; // Space+T
             bindings = <&sl Sym>;
         };
     };
@@ -49,7 +52,7 @@
             compatible = "zmk,behavior-hold-tap";
             label = "HOMEROW_MODS";
             #binding-cells = <2>;
-            tapping-term-ms = <200>;    // <---[[moderate duration]]
+            tapping-term-ms = <300>;    // <---[[moderate duration]]
             quick-tap-ms = <0>;
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
@@ -60,12 +63,21 @@
             compatible = "zmk,behavior-hold-tap";
             label = "HOMEROW_MODS";
             #binding-cells = <2>;
-            tapping-term-ms = <200>;    // <---[[moderate duration]]
+            tapping-term-ms = <300>;    // <---[[moderate duration]]
             quick-tap-ms = <0>;
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
             hold-trigger-key-positions = <0 1 2 3 4 5 12 13 14 15 16 17 24 25 26 27 28 29 36 37 38 39 40 41>;
         };
+
+        ltsl: layer_toogle_sticky_layer {
+            compatible = "zmk,behavior-hold-tap"; 
+            label = "LAYER_TOGGLE_STICKY_LAYER";
+            #binding-cells = <2>;
+            tapping-term-ms = <300>; 
+            bindings = <&mo>, <&sl>;
+        }; 
+
 
         ltsk: layer_toogle_sticky_key {
             compatible = "zmk,behavior-hold-tap"; 
@@ -76,14 +88,16 @@
           };
 
     };
+
     keymap {
                 compatible = "zmk,keymap";
+                
                 default_layer {// layer 0
                         bindings = <
         &kp TAB       &kp Q       &kp W      &kp F       &kp P       &kp B   /**/  &kp J      &kp L       &kp U        &kp Y       &kp SQT      &kp LG(N1)
-        &lt Nav ESC   &lm LSHFT A &lm LALT R &lm LSHFT S &lm LCTRL T &kp G   /**/  &kp M      &rm LCTRL N &rm LSHFT E  &rm LALT I  &kp O        &kp LG(N2)
-        &kp LC(SPACE) &kp Z       &kp X      &kp C       &lt Sym D   &kp V   /**/  &kp K      &lt Sym H  &kp COMMA    &kp DOT     &kp MINUS     &kp LG(N3) 
-                 &ltsk Fun LSHFT           &lt Num BSPC           &kp SPACE  /**/  &lt Sym RET            &ltsk Num LSHFT          &kp LGUI
+        &lt Nav ESC   &kp A       &lm LALT R &kp S       &lm LCTRL T &kp G   /**/  &kp M      &rm LCTRL N &kp E        &rm LALT I  &kp O        &kp LG(N2)
+        &kp LC(SPACE) &kp Z       &kp X      &kp C       &kp D       &kp V   /**/  &kp K      &kp H       &kp COMMA    &kp DOT     &kp MINUS     &kp LG(N3) 
+                 &ltsl Fun Sym           &lt Num BSPC           &kp SPACE  /**/  &lt Sym RET            &ltsk Num LSHFT          &kp LGUI
         >;
         };
 
@@ -99,7 +113,7 @@
                 symbol_layer { // layer 2
                         bindings = <
         &none      &kp EXCL   &kp AT     &kp HASH   &kp DOLLAR &kp PRCNT /**/ &kp AMPS   &kp LBRC   &kp LPAR   &kp RPAR   &kp RBRC   &kp LG(4)
-        &kp CAPS   &kp EQUAL  &kp PLUS   &kp STAR   &kp CARET  &kp PIPE  /**/ &kp TILDE  &kp SLASH  &kp COLON  &kp QMARK  &kp GRAVE  &kp LG(5)
+        &caps_word &kp EQUAL  &kp PLUS   &kp STAR   &kp CARET  &kp PIPE  /**/ &kp TILDE  &kp SLASH  &kp COLON  &kp QMARK  &kp GRAVE  &kp LG(5)
         &none      &none      &none      &kp LT     &kp GT     &none     /**/ &kp SEMI   &kp UNDER  &kp LBKT   &kp RBKT   &kp BSLH   &kp LG(6)
                                         &none      &kp DEL     &none     /**/ &none      &none   &none   
         >;
@@ -107,10 +121,10 @@
 
                 nav_layer {// layer 3
                         bindings = <
-        &trans     &trans     &trans     &kp LC(RIGHT) &trans  &trans     &trans     &trans     &trans     &trans     &kp UP     &trans
-        &trans     &kp LGUI   &trans     &kp LSHFT  &kp LCTRL  &trans     &kp LEFT   &kp DOWN   &kp UP     &kp RIGHT  &trans     &trans
-        &trans     &trans     &trans     &trans     &trans     &kp LC(LEFT) &kp DOWN &trans     &trans     &trans     &trans     &trans
-                   &trans     &trans     &kp PSCRN     &kp PSCRN     &trans     &trans
+        &trans &trans   &trans &kp LC(RIGHT) &trans    &trans       /**/ &trans     &trans     &trans     &trans     &kp UP     &trans
+        &trans &kp LGUI &trans &kp LSHFT     &kp LCTRL &trans       /**/ &kp LEFT   &kp DOWN   &kp UP     &kp RIGHT  &trans     &trans
+        &trans &trans   &trans &trans        &trans    &kp LC(LEFT) /**/ &kp DOWN   &trans     &trans     &trans     &trans     &trans
+                   &trans     &trans     &kp PSCRN                  /**/   &kp PSCRN     &trans     &trans
         >;
         };
 
@@ -118,7 +132,7 @@
                 num_layer {// layer 4
                         bindings = <
         &trans     &trans     &trans     &trans     &trans     &trans     &trans     &kp N7    &kp N8   &kp N9     &trans     &kp LG(N7)
-        &caps_word &trans     &trans     &trans     &trans     &trans     &trans     &kp N1    &kp N2   &kp N3     &kp N0     &kp LG(N8)
+        &kp CAPS   &trans     &trans     &trans     &trans     &trans     &trans     &kp N1    &kp N2   &kp N3     &kp N0     &kp LG(N8)
         &trans     &trans     &trans     &trans     &trans     &trans     &trans     &kp N4    &kp N5   &kp N6     &trans     &kp LG(N9)
                    &trans     &kp N0     &trans     &trans     &kp N0     &trans
         >;
