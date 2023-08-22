@@ -121,10 +121,10 @@
 
                 nav_layer {// layer 3
                         bindings = <
-        &trans &trans   &trans &kp LC(RIGHT) &trans    &trans       /**/ &trans     &trans     &trans     &trans     &kp UP     &trans
-        &trans &kp LGUI &trans &kp LSHFT     &kp LCTRL &trans       /**/ &kp LEFT   &kp DOWN   &kp UP     &kp RIGHT  &trans     &trans
-        &trans &trans   &trans &trans        &trans    &kp LC(LEFT) /**/ &kp DOWN   &trans     &trans     &trans     &trans     &trans
-                   &trans     &trans     &kp PSCRN                  /**/   &kp PSCRN     &trans     &trans
+        &trans &trans   &trans &kp LC(MINUS) &kp LC(PLUS) &trans       /**/ &trans     &trans     &trans     &trans     &kp UP     &trans
+        &trans &kp LGUI &trans &kp LSHFT     &kp LCTRL    &trans       /**/ &kp LEFT   &kp DOWN   &kp UP     &kp RIGHT  &trans     &trans
+        &trans &trans   &trans &trans        &trans       &kp LC(LEFT) /**/ &kp DOWN   &trans     &trans     &trans     &trans     &trans
+                   &trans     &trans     &kp PSCRN                     /**/   &kp PSCRN     &trans     &trans
         >;
         };
 
@@ -140,10 +140,10 @@
 
                 fun_layer {// layer 5
                         bindings = <
-        &trans     &trans     &trans     &trans     &trans     &trans     &trans     &kp F7    &kp F8   &kp F9     &kp F10   &trans
-        &kp CAPS   &trans     &trans     &trans     &trans     &trans     &trans     &kp F1    &kp F2   &kp F3     &kp F11   &trans
-        &trans     &trans     &trans     &trans     &trans     &trans     &trans     &kp F4    &kp F5   &kp F6     &kp F12   &trans
-                   &trans     &trans     &trans     &kp LS(F10)     &trans     &trans
+        &trans     &trans     &trans     &trans        &trans       &trans /**/ &trans     &kp F7    &kp F8   &kp F9     &kp F10   &trans
+        &kp CAPS   &trans     &trans     &kp LC(MINUS) &kp LC(PLUS) &trans /**/ &trans     &kp F1    &kp F2   &kp F3     &kp F11   &trans
+        &trans     &trans     &trans     &trans        &trans       &trans /**/ &trans     &kp F4    &kp F5   &kp F6     &kp F12   &trans
+                   &trans     &trans     &trans                               &kp LS(F10)     &trans     &trans
         >;
         };
     };
