@@ -132,7 +132,7 @@
                 num_layer {// layer 4
                         bindings = <
         &trans     &trans     &trans     &trans     &trans     &trans     &trans     &kp N7    &kp N8   &kp N9     &trans     &kp LG(N7)
-        &kp CAPS   &trans     &trans     &trans     &trans     &trans     &trans     &kp N1    &kp N2   &kp N3     &kp N0     &kp LG(N8)
+        &caps_word &trans     &trans     &trans     &trans     &trans     &trans     &kp N1    &kp N2   &kp N3     &kp N0     &kp LG(N8)
         &trans     &trans     &trans     &trans     &trans     &trans     &trans     &kp N4    &kp N5   &kp N6     &trans     &kp LG(N9)
                    &trans     &kp N0     &trans     &trans     &kp N0     &trans
         >;
@@ -141,7 +141,7 @@
                 fun_layer {// layer 5
                         bindings = <
         &trans     &trans     &trans     &trans     &trans     &trans     &trans     &kp F7    &kp F8   &kp F9     &kp F10   &trans
-        &trans     &trans     &trans     &trans     &trans     &trans     &trans     &kp F1    &kp F2   &kp F3     &kp F11   &trans
+        &kp CAPS   &trans     &trans     &trans     &trans     &trans     &trans     &kp F1    &kp F2   &kp F3     &kp F11   &trans
         &trans     &trans     &trans     &trans     &trans     &trans     &trans     &kp F4    &kp F5   &kp F6     &kp F12   &trans
                    &trans     &trans     &trans     &trans     &trans     &trans
         >;
