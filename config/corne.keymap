@@ -121,7 +121,7 @@
 
                 nav_layer {// layer 3
                         bindings = <
-        &trans &trans   &trans &kp LC(MINUS) &kp LC(PLUS) &trans       /**/ &kp LC(LEFT) &kp PGDN   &kp PGUP   &kp LC(RIGHT) &trans     &trans
+        &trans &trans   &trans &kp LC(MINUS) &kp LC(PLUS) &trans       /**/ &kp LC(LEFT) &kp PGDN   &kp PGUP   &kp LC(RIGHT) &trans     &kp LS(F10)
         &trans &kp LGUI &trans &kp LSHFT     &kp LCTRL    &trans       /**/ &kp LEFT     &kp DOWN   &kp UP     &kp RIGHT     &trans     &trans
         &trans &trans   &trans &trans        &trans       &kp LC(LEFT) /**/ &kp DOWN     &trans     &trans     &trans        &trans     &trans
                    &trans     &trans     &trans                     /**/   &trans     &trans     &trans
