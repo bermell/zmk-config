@@ -112,9 +112,9 @@
 
                 symbol_layer { // layer 2
                         bindings = <
-        &none      &kp EXCL   &kp AT     &kp HASH   &kp DOLLAR &kp PRCNT /**/ &kp AMPS   &kp LBRC   &kp LPAR   &kp RPAR   &kp RBRC   &kp LG(4)
-        &caps_word &kp EQUAL  &kp PLUS   &kp STAR   &kp CARET  &kp PIPE  /**/ &kp TILDE  &kp SLASH  &kp COLON  &kp QMARK  &kp GRAVE  &kp LG(5)
-        &none      &none      &none      &kp LT     &kp GT     &none     /**/ &kp SEMI   &kp UNDER  &kp LBKT   &kp RBKT   &kp BSLH   &kp LG(6)
+        &none      &kp EXCL   &kp AT     &kp HASH   &kp DOLLAR &kp PRCNT /**/ &kp AMPS   &kp LBRC   &kp LPAR   &kp RPAR   &kp RBRC   &kp LG(N4)
+        &caps_word &kp EQUAL  &kp PLUS   &kp STAR   &kp CARET  &kp PIPE  /**/ &kp TILDE  &kp SLASH  &kp COLON  &kp QMARK  &kp GRAVE  &kp LG(N5)
+        &none      &none      &none      &kp LT     &kp GT     &none     /**/ &kp SEMI   &kp UNDER  &kp LBKT   &kp RBKT   &kp BSLH   &kp LG(N6)
                                         &none      &kp DEL     &none     /**/ &none      &none   &none   
         >;
         };
