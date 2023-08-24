@@ -52,7 +52,7 @@
             compatible = "zmk,behavior-hold-tap";
             label = "HOMEROW_MODS";
             #binding-cells = <2>;
-            tapping-term-ms = <300>;    // <---[[moderate duration]]
+            tapping-term-ms = <200>;    // <---[[moderate duration]]
             quick-tap-ms = <0>;
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
@@ -63,7 +63,7 @@
             compatible = "zmk,behavior-hold-tap";
             label = "HOMEROW_MODS";
             #binding-cells = <2>;
-            tapping-term-ms = <300>;    // <---[[moderate duration]]
+            tapping-term-ms = <200>;    // <---[[moderate duration]]
             quick-tap-ms = <0>;
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
@@ -74,7 +74,7 @@
             compatible = "zmk,behavior-hold-tap"; 
             label = "LAYER_TOGGLE_STICKY_LAYER";
             #binding-cells = <2>;
-            tapping-term-ms = <300>; 
+            tapping-term-ms = <200>; 
             bindings = <&mo>, <&sl>;
         }; 
 
@@ -83,7 +83,7 @@
             compatible = "zmk,behavior-hold-tap"; 
             label = "SOMETHING";
             #binding-cells = <2>;
-            tapping-term-ms = <300>; 
+            tapping-term-ms = <200>; 
             bindings = <&mo>, <&sk>;
           };
 
@@ -95,7 +95,7 @@
                 default_layer {// layer 0
                         bindings = <
         &kp TAB       &kp Q       &kp W      &kp F       &kp P       &kp B   /**/  &kp J      &kp L       &kp U        &kp Y       &kp SQT      &kp LG(N1)
-        &lt Nav ESC   &kp A       &lm LALT R &kp S       &lm LCTRL T &kp G   /**/  &kp M      &rm LCTRL N &kp E        &rm LALT I  &kp O        &kp LG(N2)
+        &lt Nav ESC   &kp A       &lm LALT R &lm LSHFT S &lm LCTRL T &kp G   /**/  &kp M      &rm LCTRL N &kp E        &rm LALT I  &kp O        &kp LG(N2)
         &kp LC(SPACE) &kp Z       &kp X      &kp C       &kp D       &kp V   /**/  &kp K      &kp H       &kp COMMA    &kp DOT     &kp MINUS     &kp LG(N3) 
                  &ltsl Fun Sym           &lt Num BSPC           &kp SPACE  /**/  &lt Sym RET            &ltsk Num LSHFT          &kp LGUI
         >;
@@ -121,10 +121,10 @@
 
                 nav_layer {// layer 3
                         bindings = <
-        &trans &trans   &trans &kp LC(MINUS) &kp LC(PLUS) &trans       /**/ &trans     &trans     &trans     &trans     &kp UP     &trans
-        &trans &kp LGUI &trans &kp LSHFT     &kp LCTRL    &trans       /**/ &kp LEFT   &kp DOWN   &kp UP     &kp RIGHT  &trans     &trans
-        &trans &trans   &trans &trans        &trans       &kp LC(LEFT) /**/ &kp DOWN   &trans     &trans     &trans     &trans     &trans
-                   &trans     &trans     &kp PSCRN                     /**/   &kp PSCRN     &trans     &trans
+        &trans &trans   &trans &kp LC(MINUS) &kp LC(PLUS) &trans       /**/ &kp LC(LEFT) &kp PGDN   &kp PGUP   &kp LC(RIGHT) &trans     &trans
+        &trans &kp LGUI &trans &kp LSHFT     &kp LCTRL    &trans       /**/ &kp LEFT     &kp DOWN   &kp UP     &kp RIGHT     &trans     &trans
+        &trans &trans   &trans &trans        &trans       &kp LC(LEFT) /**/ &kp DOWN     &trans     &trans     &trans        &trans     &trans
+                   &trans     &trans     &trans                     /**/   &trans     &trans     &trans
         >;
         };
 
@@ -140,7 +140,7 @@
 
                 fun_layer {// layer 5
                         bindings = <
-        &trans     &trans     &trans     &trans        &trans       &trans /**/ &trans     &kp F7    &kp F8   &kp F9     &kp F10   &trans
+        &trans     &trans     &trans     &trans        &kp PSCRN    &trans /**/ &trans     &kp F7    &kp F8   &kp F9     &kp F10   &trans
         &kp CAPS   &trans     &trans     &kp LC(MINUS) &kp LC(PLUS) &trans /**/ &trans     &kp F1    &kp F2   &kp F3     &kp F11   &trans
         &trans     &trans     &trans     &trans        &trans       &trans /**/ &trans     &kp F4    &kp F5   &kp F6     &kp F12   &trans
                    &trans     &trans     &trans                               &kp LS(F10)     &trans     &trans
