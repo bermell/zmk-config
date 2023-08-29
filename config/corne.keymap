@@ -66,9 +66,7 @@
             tap-ms = <40>;
             #binding-cells = <0>;
             bindings
-                = <&macro_tap &kp SCROLLLOCK>
-                , <&macro_tap &kp o>
-                , <&macro_tap &kp a>
+                = <&kp SCROLLLOCK &kp DOUBLE_QUOTES &kp A>
                 ;
         };
     };
