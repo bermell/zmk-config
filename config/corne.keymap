@@ -69,6 +69,16 @@
                 = <&kp SCROLLLOCK &kp DOUBLE_QUOTES &kp A>
                 ;
         };
+        m_oo: m_oo {
+            label = "macro_swedish_oo";
+            compatible = "zmk,behavior-macro";
+            wait-ms = <40>;
+            tap-ms = <40>;
+            #binding-cells = <0>;
+            bindings
+                = <&kp SCROLLLOCK &kp DOUBLE_QUOTES &kp O>
+                ;
+        };
     };
 
     behaviors {
@@ -147,9 +157,9 @@
 
                 nav_layer {// layer 3
                         bindings = <
-        &trans &trans   &trans &kp LC(MINUS) &kp LC(PLUS) &trans       /**/ &kp LC(LEFT) &kp PGDN   &kp PGUP   &kp LC(RIGHT) &trans     &kp LS(F10)
-        &trans &kp LGUI &trans &kp LSHFT     &kp LCTRL    &trans       /**/ &kp LEFT     &kp DOWN   &kp UP     &kp RIGHT     &trans     &m_au
-        &trans &trans   &trans &trans        &trans       &kp LC(LEFT) /**/ &kp DOWN     &trans     &trans     &trans        &trans     &trans
+        &trans &trans   &trans &kp LC(MINUS) &kp LC(PLUS) &trans       /**/ &kp LC(LEFT) &kp PGDN   &kp PGUP   &kp LC(RIGHT) &trans     &m_au
+        &trans &kp LGUI &trans &kp LSHFT     &kp LCTRL    &trans       /**/ &kp LEFT     &kp DOWN   &kp UP     &kp RIGHT     &trans     &m_eh
+        &trans &trans   &trans &trans        &trans       &kp LC(LEFT) /**/ &kp DOWN     &trans     &trans     &trans        &trans     &m_oo
                    &trans     &trans     &trans                     /**/   &trans     &trans     &trans
         >;
         };
