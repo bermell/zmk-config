@@ -47,6 +47,22 @@
             bindings = <&sl Sym>;
         };
     };
+
+    macros {
+        m_au: m_au {
+            label = "macro_swedish_au";
+            compatible = "zmk,behavior-macro";
+            wait-ms = <40>;
+            tap-ms = <40>;
+            #binding-cells = <0>;
+            bindings
+                = <&macro_tap &kp SCROLLLOCK>
+                , <&macro_tap &kp o>
+                , <&macro_tap &kp a>
+                ;
+        };
+    };
+
     behaviors {
         lm: left_hand_homerow_mods {
             compatible = "zmk,behavior-hold-tap";
@@ -87,6 +103,8 @@
             bindings = <&mo>, <&sk>;
           };
 
+        
+
     };
 
     keymap {
@@ -122,7 +140,7 @@
                 nav_layer {// layer 3
                         bindings = <
         &trans &trans   &trans &kp LC(MINUS) &kp LC(PLUS) &trans       /**/ &kp LC(LEFT) &kp PGDN   &kp PGUP   &kp LC(RIGHT) &trans     &kp LS(F10)
-        &trans &kp LGUI &trans &kp LSHFT     &kp LCTRL    &trans       /**/ &kp LEFT     &kp DOWN   &kp UP     &kp RIGHT     &trans     &trans
+        &trans &kp LGUI &trans &kp LSHFT     &kp LCTRL    &trans       /**/ &kp LEFT     &kp DOWN   &kp UP     &kp RIGHT     &trans     &m_au
         &trans &trans   &trans &trans        &trans       &kp LC(LEFT) /**/ &kp DOWN     &trans     &trans     &trans        &trans     &trans
                    &trans     &trans     &trans                     /**/   &trans     &trans     &trans
         >;
