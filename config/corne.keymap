@@ -8,10 +8,10 @@
 
 #define Default 0 
 #define Qwerty 1 
-#define Sym 2
-#define Nav 3
-#define Num 4
-#define Fun 5
+#define Nav 2
+#define Num 3
+#define Fun 4
+#define Sym 5
 
 &sk {
     release-after-ms = <2000>;
@@ -133,7 +133,7 @@
         &kp TAB       &kp Q       &kp W      &kp F       &kp P       &kp B   /**/  &kp J      &kp L       &kp U        &kp Y       &kp SQT      &kp LG(N1)
         &lt Nav ESC   &kp A       &lm LALT R &lm LSHFT S &lm LCTRL T &kp G   /**/  &kp M      &rm LCTRL N &kp E        &rm LALT I  &kp O        &kp LG(N2)
         &kp LC(SPACE) &kp Z       &kp X      &kp C       &kp D       &kp V   /**/  &kp K      &kp H       &kp COMMA    &kp DOT     &kp MINUS     &kp LG(N3) 
-                 &ltsl Fun Sym           &lt Num BSPC           &kp SPACE  /**/  &lt Sym RET            &ltsk Num LSHFT          &kp LGUI
+                 &ltsl Fun Sym           &lt Num BSPC           &kp SPACE    /**/  &ltsl Sym Sym        &ltsk Num LSHFT          &kp LGUI
         >;
         };
 
@@ -146,40 +146,41 @@
         >;
         };
 
-                symbol_layer { // layer 2
-                        bindings = <
-        &none      &kp EXCL   &kp AT     &kp HASH   &kp DOLLAR &kp PRCNT /**/ &kp AMPS   &kp LBRC   &kp LPAR   &kp RPAR   &kp RBRC   &kp LG(N4)
-        &caps_word &kp EQUAL  &kp PLUS   &kp STAR   &kp CARET  &kp PIPE  /**/ &kp TILDE  &kp SLASH  &kp COLON  &kp QMARK  &kp GRAVE  &kp LG(N5)
-        &none      &none      &none      &kp LT     &kp GT     &none     /**/ &kp SEMI   &kp UNDER  &kp LBKT   &kp RBKT   &kp BSLH   &kp LG(N6)
-                                        &none      &kp DEL     &none     /**/ &none      &none   &none   
-        >;
-        };
 
-                nav_layer {// layer 3
+                nav_layer {// layer 2
                         bindings = <
         &trans &trans   &trans &kp LC(MINUS) &kp LC(PLUS) &trans       /**/ &kp LC(LEFT) &kp PGDN   &kp PGUP   &kp LC(RIGHT) &trans     &m_au
         &trans &kp LGUI &trans &kp LSHFT     &kp LCTRL    &trans       /**/ &kp LEFT     &kp DOWN   &kp UP     &kp RIGHT     &trans     &m_eh
         &trans &trans   &trans &trans        &trans       &kp LC(LEFT) /**/ &kp DOWN     &trans     &trans     &trans        &trans     &m_oo
-                   &trans     &trans     &trans                     /**/   &trans     &trans     &trans
+                   &kp LS(F10)     &trans     &trans                   /**/   &kp RET     &trans     &trans
         >;
         };
 
 
-                num_layer {// layer 4
+                num_layer {// layer 3
                         bindings = <
-        &trans     &trans     &trans     &trans     &trans     &trans     &trans     &kp N7    &kp N8   &kp N9     &trans     &kp LG(N7)
-        &caps_word &trans     &trans     &trans     &trans     &trans     &trans     &kp N1    &kp N2   &kp N3     &kp N0     &kp LG(N8)
-        &trans     &trans     &trans     &trans     &trans     &trans     &trans     &kp N4    &kp N5   &kp N6     &trans     &kp LG(N9)
-                   &trans     &kp N0     &trans     &trans     &kp N0     &trans
+        &trans     &trans     &trans     &trans     &trans     &trans /**/ &trans     &kp N7    &kp N8   &kp N9     &trans     &kp LG(N7)
+        &caps_word &trans     &trans     &trans     &trans     &trans /**/ &kp COLON     &kp N1    &kp N2   &kp N3     &kp N0     &kp LG(N8)
+        &trans     &trans     &trans     &trans     &trans     &trans /**/ &kp DOT     &kp N4    &kp N5   &kp N6     &trans     &kp LG(N9)
+                                        &trans     &kp N0   &trans  /**/    &kp RET     &kp N0     &trans
         >;
         };
 
-                fun_layer {// layer 5
+                fun_layer {// layer 4
                         bindings = <
         &trans     &trans     &trans     &trans        &kp PSCRN    &trans /**/ &trans     &kp F7    &kp F8   &kp F9     &kp F10   &trans
         &kp CAPS   &trans     &trans     &kp LC(MINUS) &kp LC(PLUS) &trans /**/ &trans     &kp F1    &kp F2   &kp F3     &kp F11   &trans
         &trans     &trans     &trans     &trans        &trans       &trans /**/ &trans     &kp F4    &kp F5   &kp F6     &kp F12   &trans
-                   &trans     &trans     &trans                               &kp LS(F10)     &trans     &trans
+                                              &trans     &trans     &trans /**/  &kp LS(F10)     &trans     &trans
+        >;
+        };
+
+                symbol_layer { // layer 5
+                        bindings = <
+        &none      &kp EXCL   &kp AT     &kp HASH   &kp DOLLAR &kp PRCNT /**/ &kp AMPS   &kp LBRC   &kp LPAR   &kp RPAR   &kp RBRC   &kp LG(N4)
+        &caps_word &kp EQUAL  &kp PLUS   &kp STAR   &kp CARET  &kp PIPE  /**/ &kp TILDE  &kp SLASH  &kp COLON  &kp QMARK  &kp GRAVE  &kp LG(N5)
+        &none      &none      &none      &kp LT     &kp GT     &none     /**/ &kp SEMI   &kp UNDER  &kp LBKT   &kp RBKT   &kp BSLH   &kp LG(N6)
+                                        &none      &kp DEL     &none     /**/ &kp RET    &none   &none   
         >;
         };
     };
