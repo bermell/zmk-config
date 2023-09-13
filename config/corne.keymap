@@ -160,8 +160,8 @@
                 num_layer {// layer 3
                         bindings = <
         &trans     &trans     &trans     &trans     &trans     &trans /**/ &trans     &kp N7    &kp N8   &kp N9     &trans     &kp LG(N7)
-        &caps_word &trans     &trans     &trans     &trans     &trans /**/ &kp COLON     &kp N1    &kp N2   &kp N3     &kp N0     &kp LG(N8)
-        &trans     &trans     &trans     &trans     &trans     &trans /**/ &kp DOT     &kp N4    &kp N5   &kp N6     &trans     &kp LG(N9)
+        &caps_word &trans     &trans     &trans     &trans     &trans /**/ &kp COLON  &kp N1    &kp N2   &kp N3     &kp N0     &kp LG(N8)
+        &trans     &trans     &trans     &trans     &trans     &trans /**/ &kp DOT    &kp N4    &kp N5   &kp N6     &trans     &kp LG(N9)
                                         &trans     &kp N0   &trans  /**/    &kp RET     &kp N0     &trans
         >;
         };
