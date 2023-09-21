@@ -121,6 +121,14 @@
             bindings = <&mo>, <&sk>;
           };
 
+
+        msk: mod_sticky_key {
+            compatible = "zmk,behavior-hold-tap"; 
+            label = "SOMETHING";
+            #binding-cells = <2>;
+            tapping-term-ms = <200>; 
+            bindings = <&kp>, <&kp>;
+          };
         
 
     };
@@ -133,7 +141,7 @@
         &kp TAB       &kp Q       &kp W      &kp F       &kp P       &kp B   /**/  &kp J      &kp L       &kp U        &kp Y       &kp SQT      &kp LG(N1)
         &lt Nav ESC   &kp A       &lm LALT R &lm LSHFT S &lm LCTRL T &kp G   /**/  &kp M      &rm LCTRL N &kp E        &rm LALT I  &kp O        &kp LG(N2)
         &kp LC(SPACE) &kp Z       &kp X      &kp C       &kp D       &kp V   /**/  &kp K      &kp H       &kp COMMA    &kp DOT     &kp MINUS     &kp LG(N3) 
-                 &ltsl Fun Sym           &lt Num BSPC           &kp SPACE    /**/  &ltsl Sym Sym        &ltsk Num LSHFT          &kp LGUI
+                 &ltsl Fun Sym           &lt Num BSPC           &kp SPACE    /**/  &ltsl Sym Sym        &msk LSHFT LSHFT        &kp LGUI
         >;
         };
 
@@ -162,7 +170,7 @@
         &trans     &trans     &trans     &trans     &trans     &trans /**/ &trans     &kp N7    &kp N8   &kp N9     &trans     &kp LG(N7)
         &caps_word &trans     &trans     &trans     &trans     &trans /**/ &kp COLON  &kp N1    &kp N2   &kp N3     &kp N0     &kp LG(N8)
         &trans     &trans     &trans     &trans     &trans     &trans /**/ &kp DOT    &kp N4    &kp N5   &kp N6     &trans     &kp LG(N9)
-                                        &trans     &kp N0   &trans  /**/    &kp RET     &kp N0     &trans
+                                        &trans     &kp N0   &trans    /**/   &kp RET     &kp N0     &trans
         >;
         };
 
