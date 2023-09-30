@@ -39,7 +39,7 @@
         combo_ret_right { 
             timeout-ms = <50>;
             key-positions = <31 32>; // H+, 
-            bindings = <&kp RET>
+            bindings = <&kp RET>;
         };
         combo_ret_left { 
             timeout-ms = <50>;
