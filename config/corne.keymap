@@ -12,6 +12,7 @@
 #define Num 3
 #define Fun 4
 #define Sym 5
+#define SFu 6
 
 &sk {
     release-after-ms = <2000>;
@@ -30,11 +31,20 @@
             key-positions = <19 20>; // N+E 
             bindings = <&kp K>;
         };
-
         combo_v { 
             timeout-ms = <50>;
             key-positions = <15 16>; // S+T 
             bindings = <&kp V>;
+        };
+        combo_ret_right { 
+            timeout-ms = <50>;
+            key-positions = <31 32>; // H+, 
+            bindings = <&kp RET>
+        };
+        combo_ret_left { 
+            timeout-ms = <50>;
+            key-positions = <28 29>; // C+D 
+            bindings = <&kp RET>;
         };
         combo_sticky_sym_right {
             timeout-ms = <50>;
@@ -129,31 +139,27 @@
             tapping-term-ms = <200>; 
             bindings = <&kp>, <&sk>;
           };
-        
-
     };
 
     keymap {
                 compatible = "zmk,keymap";
-                
                 default_layer {// layer 0
                         bindings = <
-        &kp TAB       &kp Q       &kp W      &kp F       &kp P       &kp B   /**/  &kp J      &kp L       &kp U        &kp Y       &kp SQT      &kp LG(N1)
-        &lt Nav ESC   &kp A       &lm LALT R &lm LSHFT S &lm LCTRL T &kp G   /**/  &kp M      &rm LCTRL N &kp E        &rm LALT I  &kp O        &kp LG(N2)
-        &kp LC(SPACE) &kp Z       &kp X      &kp C       &kp D       &kp V   /**/  &kp K      &kp H       &kp COMMA    &kp DOT     &kp MINUS     &kp LG(N3) 
-                 &ltsl Fun Sym           &lt Num BSPC           &kp SPACE    /**/  &ltsl Sym Sym        &msk LSHFT LSHFT        &kp LGUI
+        &kp TAB       &kp Q       &kp W      &kp F       &kp P       &kp B   /**/  &kp J      &kp L       &kp U        &kp Y       &kp SQT    &kp LG(N1)
+        &lt Nav ESC   &kp A       &lm LALT R &lm LSHFT S &lm LCTRL T &kp G   /**/  &kp M      &rm LCTRL N &kp E        &rm LALT I  &kp O      &lt SFu LG(N2)
+        &kp LC(SPACE) &kp Z       &kp X      &kp C       &kp D       &kp V   /**/  &kp K      &kp H       &kp COMMA    &kp DOT     &kp MINUS  &kp LG(N3) 
+                 &ltsl Fun Sym           &lt Num BSPC           &kp SPACE    /**/  &ltsl Sym Sym        &msk LSHFT LSHFT        &sl SFu
         >;
         };
 
                 qwerty_layer { // layer 1
                         bindings = <
         &kp TAB       &kp Q    &lt Num W   &kp E       &kp R       &kp T       &kp Y       &kp U       &kp I       &kp O      &kp P     &trans
-        &lt Nav ESC   &kp A    &lm LALT S  &lm LSHFT D &lm LCTRL F &trans      &kp H       &rm LCTRL J &rm LSHFT K &rm LALT L &kp SQT   &trans
+        &lt Nav ESC   &kp A    &lm LALT S  &lm LSHFT D &lm LCTRL F &kp G       &kp H       &rm LCTRL J &rm LSHFT K &rm LALT L &kp SQT   &trans
         &kp LC(SPACE) &kp Z    &kp X       &kp C       &kp V       &kp B       &kp N       &kp M       &kp COMMA   &kp DOT    &kp MINUS &trans
                       &trans &trans   &trans      &trans      &trans      &trans          
         >;
         };
-
 
                 nav_layer {// layer 2
                         bindings = <
@@ -163,7 +169,6 @@
                    &kp LS(F10)     &trans     &trans                   /**/   &kp RET     &trans     &trans
         >;
         };
-
 
                 num_layer {// layer 3
                         bindings = <
@@ -185,10 +190,18 @@
 
                 symbol_layer { // layer 5
                         bindings = <
-        &none      &kp EXCL   &kp AT     &kp HASH   &kp DOLLAR &kp PRCNT /**/ &kp AMPS   &kp LBRC   &kp LPAR   &kp RPAR   &kp RBRC   &kp LG(N4)
-        &caps_word &kp EQUAL  &kp PLUS   &kp STAR   &kp CARET  &kp PIPE  /**/ &kp TILDE  &kp SLASH  &kp COLON  &kp QMARK  &kp GRAVE  &kp LG(N5)
-        &none      &none      &none      &kp LT     &kp GT     &none     /**/ &kp SEMI   &kp UNDER  &kp LBKT   &kp RBKT   &kp BSLH   &kp LG(N6)
-                                        &none      &kp DEL     &none     /**/ &kp RET    &none   &none   
+        &none &kp EXCL   &kp AT     &kp HASH   &kp DOLLAR &kp PRCNT   /**/ &kp AMPS   &kp LBRC   &kp LPAR   &kp RPAR   &kp RBRC   &kp LG(N4)
+        &none &kp EQUAL  &kp PLUS   &kp STAR   &kp CARET  &kp PIPE    /**/ &kp TILDE  &kp SLASH  &kp COLON  &kp QMARK  &kp GRAVE  &kp LG(N5)
+        &none &none      &none      &kp LT     &kp GT     &none       /**/ &kp SEMI   &kp UNDER  &kp LBKT   &kp RBKT   &kp BSLH   &kp LG(N6)
+                                   &caps_word   &kp DEL   &caps_word  /**/   &kp RET    &none   &none   
+        >;
+        };
+                sec_func_layer {// layer 6
+                        bindings = <
+        &trans     &trans     &trans     &trans     &trans     &trans /**/ &trans    &kp LC(X)   &kp LC(Z)     &trans    &trans     &trans
+        &trans     &trans     &trans     &trans     &trans     &trans /**/ &trans    &kp LC(C)   &kp LC(V)     &trans    &trans     &trans
+        &trans     &trans     &trans     &trans     &trans     &trans /**/ &trans    &trans      &kp LS(LC(V)) &trans    &trans     &trans
+                                        &trans     &trans   &trans    /**/   &trans     &trans    &trans
         >;
         };
     };
