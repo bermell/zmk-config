@@ -94,7 +94,7 @@
     behaviors {
         llm: left_hand_homerow_mods {
             compatible = "zmk,behavior-hold-tap";
-            label = "HOMEROW_MODS";
+            label = "left_home_row";
             #binding-cells = <2>;
             tapping-term-ms = <400>;
             quick-tap-ms = <0>;
@@ -106,7 +106,7 @@
 
         rrm: right_hand_homerow_mods {
             compatible = "zmk,behavior-hold-tap";
-            label = "HOMEROW_MODS";
+            label = "right_home_row";
             #binding-cells = <2>;
             tapping-term-ms = <400>;
             quick-tap-ms = <0>;
