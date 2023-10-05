@@ -200,10 +200,10 @@
         };
                 sec_func_layer {// layer 6
                         bindings = <
-        &trans     &trans     &trans     &trans     &trans     &trans /**/ &trans    &kp LC(X)   &kp LC(Z)     &trans    &trans     &trans
-        &trans     &trans     &trans     &trans     &trans     &trans /**/ &trans    &kp LC(C)   &kp LC(V)     &trans    &trans     &trans
+        &trans     &trans     &trans     &trans     &trans     &trans /**/ &trans    &kp LC(X)   &kp LC(V)     &trans    &trans     &trans
+        &trans     &trans     &trans     &trans     &trans     &trans /**/ &trans    &kp LC(C)   &kp LS(LC(V)) &trans    &kp LC(Z)  &trans
         &trans     &trans     &trans     &trans     &trans     &trans /**/ &trans    &trans      &kp LS(LC(V)) &trans    &trans     &trans
-                                        &trans     &trans   &trans    /**/   &trans     &trans    &trans
+                                        &trans     &trans   &trans    /**/   &kp LC(C)     &kp LS(LC(V))    &kp LC(Z)
         >;
         };
     };
