@@ -157,7 +157,7 @@
                 qwerty_layer { // layer 1
                         bindings = <
         &kp TAB       &kp Q    &lt Num W   &kp E       &kp R       &kp T       &kp Y       &kp U       &kp I       &kp O      &kp P     &trans
-        &lt Nav ESC   &kp A    &lm LALT S  &lm LSHFT D &lm LCTRL F &kp G       &kp H       &rm LCTRL J &rm LSHFT K &rm LALT L &kp SQT   &trans
+        &lt Nav ESC   &kp A    &kp S       &kp D       &kp F       &kp G       &kp H       &kp J       &kp K       &kp L      &kp SQT   &trans
         &kp LC(SPACE) &kp Z    &kp X       &kp C       &kp V       &kp B       &kp N       &kp M       &kp COMMA   &kp DOT    &kp MINUS &trans
                       &trans &trans   &trans      &trans      &trans      &trans          
         >;
