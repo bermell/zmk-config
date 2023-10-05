@@ -46,15 +46,22 @@
             key-positions = <27 28>; // C+D
             bindings = <&kp RET>;
         };
-        combo_sticky_sym_right {
-            timeout-ms = <50>;
-            key-positions = <19 39>; // Ret+N
-            bindings = <&sl Sym>;
-        };
-        combo_sticky_sym_left {
+        combo_tmux_prefix {
             timeout-ms = <50>;
             key-positions = <16 38>; // Space+T
-            bindings = <&sl Sym>;
+            bindings = <&kp LC(SPACE)>;
+        };
+        combo_bootloader_right {
+            timeout-ms = <50>;
+            layers = <SFu>;
+            key-positions = <6 7>; // J+L
+            bindings = <&bootloader>;
+        };
+        combo_bootloader_left {
+            timeout-ms = <50>;
+            layers = <Nav>
+            key-positions = <4 5>; // P+B
+            bindings = <&bootloader>;
         };
     };
 
@@ -96,24 +103,24 @@
             compatible = "zmk,behavior-hold-tap";
             label = "left_home_row";
             #binding-cells = <2>;
-            tapping-term-ms = <400>;
+            tapping-term-ms = <300>;
             quick-tap-ms = <0>;
-            flavor = "tap-unless-interrupted";
+            flavor = "balanced";
             require-prior-idle-ms = <125>;
             bindings = <&kp>, <&kp>;
-            hold-trigger-key-positions = <6 7 8 9 10 11   18 19 20 21 22 23    30 31 32 33 34 35>;
+            hold-trigger-key-positions = <6 7 8 9 10 11   18 19 20 21 22 23    30 31 32 33 34 35    36 37 38 39 40 41>;
         };
 
         rrm: right_hand_homerow_mods {
             compatible = "zmk,behavior-hold-tap";
             label = "right_home_row";
             #binding-cells = <2>;
-            tapping-term-ms = <400>;
+            tapping-term-ms = <300>;
             quick-tap-ms = <0>;
-            flavor = "tap-unless-interrupted";
+            flavor = "balanced";
             require-prior-idle-ms = <125>;
             bindings = <&kp>, <&kp>;
-            hold-trigger-key-positions = <0 1 2 3 4 5    12 13 14 15 16 17    24 25 26 27 28 29>;
+            hold-trigger-key-positions = <0 1 2 3 4 5    12 13 14 15 16 17    24 25 26 27 28 29    36 37 38 39 40 41>;
         };
 
         ltsl: layer_toogle_sticky_layer {
