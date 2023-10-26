@@ -177,7 +177,7 @@
                 compatible = "zmk,keymap";
                 default_layer {// layer 0
                         bindings = <
-        &kp TAB       &kp Q       &kp W       &kp F        &kp P         &kp B /**/  &kp J      &rrm LC(LS) L &kp U         &kp Y       &kp SQT    &kp LG(N1)
+        &kp TAB       &kp Q       &kp W       &kp F        &kp P         &kp B /**/  &kp J      &kp L         &kp U         &kp Y       &kp SQT    &kp LG(N1)
         &lt Nav ESC   &lly Nav A  &llm LALT R &llm LSHFT S &llm LCTRL T  &kp G /**/  &kp M      &rrm LCTRL N  &rrm LSHFT E  &rrm LALT I &kp O      &lt SFu LG(N2)
         &kp LC(SPACE) &kp Z       &kp X       &kp C        &kp D         &kp V /**/  &kp K      &kp H         &kp COMMA     &kp DOT     &kp MINUS  &kp LG(N3) 
                 &ltsl Fun Sym           &lt Num BSPC           &kp SPACE       /**/  &ltsl Sym Sym        &msk LSHFT LSHFT        &key_repeat
