@@ -12,6 +12,7 @@
 #define Fun 3
 #define Sym 4
 #define SFu 5
+#define Win 6
 
 &sk {
     release-after-ms = <2000>;
@@ -37,15 +38,20 @@
         };
         combo_ret_right { 
             timeout-ms = <50>;
-            key-positions = <31 32>; // H+, 
+            key-positions = <7 8>; // L+U, 
             bindings = <&kp RET>;
         };
         combo_ret_left { 
             timeout-ms = <50>;
-            key-positions = <27 28>; // C+D
+            key-positions = <3 4>; // F+P
             bindings = <&kp RET>;
         };
-        combo_tmux_prefix {
+        combo_tmux_prefix_right {
+            timeout-ms = <50>;
+            key-positions = <19 38>; // Ret+N
+            bindings = <&kp LC(SPACE)>;
+        };
+        combo_tmux_prefix_left {
             timeout-ms = <50>;
             key-positions = <16 38>; // Space+T
             bindings = <&kp LC(SPACE)>;
@@ -177,9 +183,9 @@
                 compatible = "zmk,keymap";
                 default_layer {// layer 0
                         bindings = <
-        &kp TAB       &kp Q       &kp W       &kp F        &kp P         &kp B /**/  &kp J      &kp L         &rrm LS(LCTRL) U &kp Y       &kp SQT    &kp LG(N1)
-        &lt Nav ESC   &lly Nav A  &llm LALT R &llm LSHFT S &llm LCTRL T  &kp G /**/  &kp M      &rrm LCTRL N  &rrm LSHFT E     &rrm LALT I &kp O      &lt SFu LG(N2)
-        &kp LC(SPACE) &kp Z       &kp X       &kp C        &kp D         &kp V /**/  &kp K      &kp H         &kp COMMA        &kp DOT     &kp MINUS  &kp LG(N3) 
+        &kp TAB       &kp Q       &llm Win W  &kp F        &lly Num P    &kp B /**/  &kp J      &kp L         &rrm LS(LCTRL) U &rrm Win Y  &kp SQT    &ltsl Win Win
+        &lt Nav ESC   &lly Nav A  &llm LALT R &llm LSHFT S &llm LCTRL T  &kp G /**/  &kp M      &rrm LCTRL N  &rrm LSHFT E     &rrm LALT I &kp O      &lt SFu DOUBLE_QUOTES
+        &kp LC(SPACE) &kp Z       &kp X       &kp C        &kp D         &kp V /**/  &kp K      &kp H         &kp COMMA        &kp DOT     &kp MINUS  &None
                 &ltsl Fun Sym           &lt Num BSPC           &kp SPACE       /**/  &ltsl Sym Sym        &msk LSHFT LSHFT        &key_repeat
         >;
         };
@@ -225,6 +231,14 @@
         &trans     &trans     &trans     &trans     &trans     &trans /**/ &trans    &kp LC(C)   &kp LS(LC(V)) &trans    &kp LC(Z)  &trans
         &trans     &trans     &trans     &trans     &trans     &trans /**/ &trans    &trans      &kp LS(LC(V)) &trans    &trans     &trans
                                         &trans     &trans   &trans    /**/   &kp LC(C)     &kp LS(LC(V))    &kp LC(Z)
+        >;
+        };
+                window_layer {// layer 6
+                        bindings = <
+        &trans     &trans     &trans     &kp LG(UP)   &trans     &trans /**/ &trans    &kp LG(N7)  &kp LG(N8)    &kp LG(N9)    &trans     &trans
+        &trans     &kp LSHFT  &LG(RIGHT) &kp LG(DOWN) &LG(LEFT)  &trans /**/ &trans    &kp LG(N4)  &kp LG(N5)    &kp LG(N6)    &trans     &trans
+        &trans     &trans     &trans     &trans       &trans     &trans /**/ &trans    &kp LG(N1)  &kp LG(N2)    &kp LG(N3)    &trans     &trans
+                                        &trans     &trans   &trans    /**/   &trans    &trans     &trans
         >;
         };
     };
