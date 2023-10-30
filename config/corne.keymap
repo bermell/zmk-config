@@ -183,10 +183,10 @@
                 compatible = "zmk,keymap";
                 default_layer {// layer 0
                         bindings = <
-        &kp TAB       &kp Q       &llm Win W  &kp F        &lly Num P    &kp B /**/  &kp J      &kp L         &rrm LS(LCTRL) U &rrm Win Y  &kp SQT    &ltsl Win Win
-        &lt Nav ESC   &lly Nav A  &llm LALT R &llm LSHFT S &llm LCTRL T  &kp G /**/  &kp M      &rrm LCTRL N  &rrm LSHFT E     &rrm LALT I &kp O      &lt SFu DOUBLE_QUOTES
-        &kp LC(SPACE) &kp Z       &kp X       &kp C        &kp D         &kp V /**/  &kp K      &kp H         &kp COMMA        &kp DOT     &kp MINUS  &none
-                &ltsl Fun Sym           &lt Num BSPC           &kp SPACE       /**/  &ltsl Sym Sym        &msk LSHFT LSHFT        &key_repeat
+        &kp TAB       &kp Q       &lly Win W  &llm LS(LCTRL) F &lly Num P    &kp B /**/  &kp J      &kp L         &rrm LS(LCTRL) U &rry Win Y  &kp SQT    &ltsl Win Win
+        &lt Nav ESC   &lly Nav A  &llm LALT R &llm LSHFT S     &llm LCTRL T  &kp G /**/  &kp M      &rrm LCTRL N  &rrm LSHFT E     &rrm LALT I &kp O      &lt SFu DOUBLE_QUOTES
+        &kp LC(SPACE) &kp Z       &kp X       &kp C            &kp D         &kp V /**/  &kp K      &kp H         &kp COMMA        &kp DOT     &kp MINUS  &none
+                &ltsl Fun Sym           &lt Num BSPC           &kp SPACE           /**/  &ltsl Sym Sym        &msk LSHFT LSHFT        &key_repeat
         >;
         };
 
