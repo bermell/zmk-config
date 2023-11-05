@@ -183,10 +183,10 @@
                 compatible = "zmk,keymap";
                 default_layer {// layer 0
                         bindings = <
-        &kp TAB       &kp Q       &lly Win W  &llm LS(LCTRL) F &lly Num P    &kp B /**/  &kp J      &kp L         &rrm LS(LCTRL) U &rry Win Y  &kp SQT    &ltsl Win Win
-        &lt Nav ESC   &lly Nav A  &llm LALT R &llm LSHFT S     &llm LCTRL T  &kp G /**/  &kp M      &rrm LCTRL N  &rrm LSHFT E     &rrm LALT I &kp O      &lt SFu DOUBLE_QUOTES
-        &kp LC(SPACE) &kp Z       &kp X       &kp C            &kp D         &kp V /**/  &kp K      &kp H         &kp COMMA        &kp DOT     &kp MINUS  &none
-                &ltsl Fun Sym           &lt Num BSPC           &kp SPACE           /**/  &ltsl Sym Sym        &msk LSHFT LSHFT        &key_repeat
+        &kp TAB       &kp Q       &lly Win W  &kp F            &lly Num P    &kp B /**/  &kp J      &rry Num L    &kp U          &rry Win Y  &kp SQT    &ltsl Win Win
+        &lt Nav ESC   &lly Nav A  &llm LALT R &llm LSHFT S     &llm LCTRL T  &kp G /**/  &kp M      &rrm LCTRL N  &rrm LSHFT E   &rrm LALT I &kp O      &lt SFu DOUBLE_QUOTES
+        &kp LC(SPACE) &kp Z       &kp X       &kp C            &kp D         &kp V /**/  &kp K      &kp H         &kp COMMA      &kp DOT     &kp MINUS  &none
+                &ltsl Fun Fun           &ltsl Num Num          &kp SPACE           /**/  &ltsl Sym Sym     &key_repeat     &msk LSHFT LSHFT        
         >;
         };
 
@@ -201,10 +201,10 @@
 
                 num_layer {// layer 2
                         bindings = <
-        &trans     &trans     &trans     &trans     &trans     &trans /**/ &trans     &kp N7    &kp N8   &kp N9     &trans     &kp LG(N7)
-        &caps_word &trans     &trans     &trans     &trans     &trans /**/ &kp COLON  &kp N4    &kp N5   &kp N6     &kp N0     &kp LG(N8)
-        &trans     &trans     &trans     &trans     &trans     &trans /**/ &kp DOT    &kp N1    &kp N2   &kp N3     &trans     &kp LG(N9)
-                                        &trans     &kp N0   &trans    /**/   &kp RET     &kp N0     &trans
+        &trans     &kp TAB       &trans     &caps_word &kp LC(BSPC) &sk LS(LCTRL) /**/ &m_au     &kp N7    &kp N8   &kp N9     &m_eh      &kp LG(N7)
+        &trans     &kp ESC       &trans     &sk LSHFT  &kp BSPC     &trans        /**/ &kp GRAVE &kp N4    &kp N5   &kp N6     &kp N0     &kp LG(N8)
+        &trans     &kp LC(SPACE) &kp LC(X)  &LC(C)     &LS(LC(V))   &LC(V)        /**/ &trans    &kp N1    &kp N2   &kp N3     &m_oo      &kp LG(N9)
+                                        &trans     &kp BSPC   &trans              /**/   &kp RET     &kp N0     &trans
         >;
         };
 
@@ -219,10 +219,10 @@
 
                 symbol_layer { // layer 4
                         bindings = <
-        &none &kp EXCL   &kp AT     &kp HASH   &kp DOLLAR &kp PRCNT   /**/ &kp AMPS   &kp LBRC   &kp LPAR   &kp RPAR   &kp RBRC   &kp LG(N4)
-        &none &kp EQUAL  &kp PLUS   &kp STAR   &kp CARET  &kp PIPE    /**/ &kp TILDE  &kp SLASH  &kp COLON  &kp QMARK  &kp GRAVE  &kp LG(N5)
-        &none &none      &none      &kp LT     &kp GT     &none       /**/ &kp SEMI   &kp UNDER  &kp LBKT   &kp RBKT   &kp BSLH   &kp LG(N6)
-                                   &caps_word   &kp DEL   &key_repeat /**/   &kp RET    &none   &none   
+        &none   &kp EXCL   &kp AT     &kp HASH   &kp DOLLAR &kp PRCNT   /**/ &kp AMPS   &kp LBRC   &kp LPAR   &kp RPAR   &kp RBRC          &kp LG(N4)
+        &kp ESC &kp EQUAL  &kp PLUS   &kp STAR   &kp CARET  &kp PIPE    /**/ &kp TILDE  &kp SLASH  &kp COLON  &kp QMARK  &kp DOUBLE_QUOTES &kp LG(N5)
+        &none   &none      &none      &kp LT     &kp GT     &none       /**/ &kp SEMI   &kp UNDER  &kp LBKT   &kp RBKT   &kp BSLH          &kp LG(N6)
+                                   &caps_word   &kp DEL   &sk LSHFT   /**/   &kp RET    &none   &none   
         >;
         };
                 sec_func_layer {// layer 5
@@ -235,9 +235,9 @@
         };
                 window_layer {// layer 6
                         bindings = <
-        &trans     &trans     &trans        &kp LG(UP)   &trans       &trans /**/ &trans    &kp LG(N7)  &kp LG(N8)    &kp LG(N9)    &trans     &trans
-        &trans     &kp LSHFT  &kp LG(RIGHT) &kp LG(DOWN) &kp LG(LEFT) &trans /**/ &trans    &kp LG(N4)  &kp LG(N5)    &kp LG(N6)    &trans     &trans
-        &trans     &trans     &trans        &trans       &trans       &trans /**/ &trans    &kp LG(N1)  &kp LG(N2)    &kp LG(N3)    &trans     &trans
+        &trans     &trans     &trans        &kp LG(UP)   &trans        &trans /**/ &trans    &kp LG(N7)  &kp LG(N8)    &kp LG(N9)    &trans     &trans
+        &trans     &kp LSHFT  &kp LG(LEFT)  &kp LG(DOWN) &kp LG(RIGHT) &trans /**/ &trans    &kp LG(N4)  &kp LG(N5)    &kp LG(N6)    &trans     &trans
+        &trans     &trans     &trans        &trans       &trans        &trans /**/ &trans    &kp LG(N1)  &kp LG(N2)    &kp LG(N3)    &trans     &trans
                                         &trans     &trans   &trans           /**/   &trans    &trans     &trans
         >;
         };
