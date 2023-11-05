@@ -201,10 +201,10 @@
 
                 num_layer {// layer 2
                         bindings = <
-        &trans     &kp TAB       &trans     &caps_word &kp LC(BSPC) &sk LS(LCTRL) /**/ &m_au     &kp N7    &kp N8   &kp N9     &m_eh      &kp LG(N7)
-        &trans     &kp ESC       &trans     &sk LSHFT  &kp BSPC     &trans        /**/ &kp GRAVE &kp N4    &kp N5   &kp N6     &kp N0     &kp LG(N8)
-        &trans     &kp LC(SPACE) &kp LC(X)  &LC(C)     &LS(LC(V))   &LC(V)        /**/ &trans    &kp N1    &kp N2   &kp N3     &m_oo      &kp LG(N9)
-                                        &trans     &kp BSPC   &trans              /**/   &kp RET     &kp N0     &trans
+        &trans     &kp TAB       &trans     &caps_word &kp LC(BSPC)  &sk LS(LCTRL) /**/ &m_au     &kp N7    &kp N8   &kp N9     &m_eh      &kp LG(N7)
+        &trans     &kp ESC       &trans     &sk LSHFT  &kp BSPC      &trans        /**/ &kp GRAVE &kp N4    &kp N5   &kp N6     &kp N0     &kp LG(N8)
+        &trans     &kp LC(SPACE) &kp LC(X)  &kp LC(C)  &kp LS(LC(V)) &kp LC(V)     /**/ &trans    &kp N1    &kp N2   &kp N3     &m_oo      &kp LG(N9)
+                                        &trans     &kp BSPC   &trans               /**/   &kp RET     &kp N0     &trans
         >;
         };
 
@@ -222,7 +222,7 @@
         &none   &kp EXCL   &kp AT     &kp HASH   &kp DOLLAR &kp PRCNT   /**/ &kp AMPS   &kp LBRC   &kp LPAR   &kp RPAR   &kp RBRC          &kp LG(N4)
         &kp ESC &kp EQUAL  &kp PLUS   &kp STAR   &kp CARET  &kp PIPE    /**/ &kp TILDE  &kp SLASH  &kp COLON  &kp QMARK  &kp DOUBLE_QUOTES &kp LG(N5)
         &none   &none      &none      &kp LT     &kp GT     &none       /**/ &kp SEMI   &kp UNDER  &kp LBKT   &kp RBKT   &kp BSLH          &kp LG(N6)
-                                   &caps_word   &kp DEL   &sk LSHFT   /**/   &kp RET    &none   &none   
+                                   &none   &kp DEL   &sk LSHFT   /**/   &kp RET    &caps_word   &none   
         >;
         };
                 sec_func_layer {// layer 5
