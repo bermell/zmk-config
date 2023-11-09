@@ -324,10 +324,10 @@
         };
                 tmux_layer {// layer 7
                         bindings = <
-        &trans     &trans     &trans     &trans     &trans     &trans       /**/ &trans     &trans     &trans  &tmux_y     &trans    &trans
-        &trans     &trans     &trans     &trans     &trans     &trans       /**/ &tmux_left &tmux_cycl &trans  &tmux_right &tmux_z   &trans
-        &trans     &trans     &trans     &trans     &trans     &trans       /**/ &trans     &trans     &trans  &tmux_pipe  &tmux_bar &trans
-                                        &trans     &tmux_xy   &kp LC(SPACE) /**/   &tmux_c     &trans     &trans
+        &trans     &trans     &trans     &trans     &trans     &trans       /**/ &trans     &trans     &trans  &tmx_y     &trans    &trans
+        &trans     &trans     &trans     &trans     &trans     &trans       /**/ &tmx_left &tmx_cycl &trans  &tmx_right &tmx_z   &trans
+        &trans     &trans     &trans     &trans     &trans     &trans       /**/ &trans     &trans     &trans  &tmx_pipe  &tmx_bar &trans
+                                        &trans     &tmx_xy   &kp LC(SPACE) /**/   &tmx_c     &trans     &trans
         >;
         };
     };
