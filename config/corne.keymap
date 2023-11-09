@@ -13,6 +13,7 @@
 #define Sym 4
 #define SFu 5
 #define Win 6
+#define tmux 7
 
 &sk {
     release-after-ms = <500>;
@@ -101,6 +102,86 @@
                 = <&kp SCROLLLOCK &kp DOUBLE_QUOTES &kp O>
                 ;
         };
+        tmx_right: tmx_right {
+            label = "tmux_right";
+            bindings = <&kp LC(SPACE) &kp N> ;
+            compatible = "zmk,behavior-macro";
+            wait-ms = <40>;
+            tap-ms = <40>;
+            #binding-cells = <0>;
+        };
+        tmx_left: tmx_left {
+            label = "tmux_left";
+            bindings = <&kp LC(SPACE) &kp P> ;
+            compatible = "zmk,behavior-macro";
+            wait-ms = <40>;
+            tap-ms = <40>;
+            #binding-cells = <0>;
+        };
+        tmx_cycl: tmx_cycl {
+            label = "tmux_cycl";
+            bindings = <&kp LC(SPACE) &kp O> ;
+            compatible = "zmk,behavior-macro";
+            wait-ms = <40>;
+            tap-ms = <40>;
+            #binding-cells = <0>;
+        };
+        tmx_z: tmx_z {
+            label = "tmux_z";
+            bindings = <&kp LC(SPACE) &kp Z> ;
+            compatible = "zmk,behavior-macro";
+            wait-ms = <40>;
+            tap-ms = <40>;
+            #binding-cells = <0>;
+        };
+        tmx_c: tmx_c {
+            label = "tmux_c";
+            bindings = <&kp LC(SPACE) &kp C> ;
+            compatible = "zmk,behavior-macro";
+            wait-ms = <40>;
+            tap-ms = <40>;
+            #binding-cells = <0>;
+        };
+        tmx_bar: tmx_bar {
+            label = "tmux_bar";
+            bindings = <&kp LC(SPACE) &kp MINUS> ;
+            compatible = "zmk,behavior-macro";
+            wait-ms = <40>;
+            tap-ms = <40>;
+            #binding-cells = <0>;
+        };
+        tmx_pipe: tmx_pipe {
+            label = "tmux_pipe";
+            bindings = <&kp LC(SPACE) &kp PIPE> ;
+            compatible = "zmk,behavior-macro";
+            wait-ms = <40>;
+            tap-ms = <40>;
+            #binding-cells = <0>;
+        };
+        tmx_xy: tmx_xy {
+            label = "tmux_xy";
+            bindings = <&kp LC(SPACE) &kp X &kp Y> ;
+            compatible = "zmk,behavior-macro";
+            wait-ms = <40>;
+            tap-ms = <40>;
+            #binding-cells = <0>;
+        };
+        tmx_y: tmx_y {
+            label = "tmux_y";
+            bindings = <&kp LC(SPACE) &kp Y> ;
+            compatible = "zmk,behavior-macro";
+            wait-ms = <40>;
+            tap-ms = <40>;
+            #binding-cells = <0>;
+        };
+//        tmx_: tmx_ {
+//            label = "tmux_";
+//            bindings = <&kp LC(SPACE) &kp _> ;
+//            compatible = "zmk,behavior-macro";
+//            wait-ms = <40>;
+//            tap-ms = <40>;
+//            #binding-cells = <0>;
+//        };
     };
 
     behaviors {
@@ -183,10 +264,10 @@
                 compatible = "zmk,keymap";
                 default_layer {// layer 0
                         bindings = <
-        &kp TAB       &kp Q       &lly Win W  &kp F            &lly Num P    &kp B /**/  &kp J      &rry Num L    &kp U          &rry Win Y  &kp SQT    &ltsl Win Win
-        &lt Nav ESC   &lly Nav A  &llm LALT R &llm LSHFT S     &llm LCTRL T  &kp G /**/  &kp M      &rrm LCTRL N  &rrm LSHFT E   &rrm LALT I &kp O      &lt SFu DOUBLE_QUOTES
-        &kp LC(SPACE) &kp Z       &kp X       &kp C            &kp D         &kp V /**/  &kp K      &kp H         &kp COMMA      &kp DOT     &kp MINUS  &none
-                &ltsl Fun Fun           &ltsl Num Num          &kp SPACE           /**/  &ltsl Sym Sym     &key_repeat     &msk LSHFT LSHFT        
+        &kp TAB       &kp Q       &lly Win W  &kp F            &lly Num P    &kp B       /**/  &kp J      &rry Num L    &kp U          &rry Win Y  &kp SQT    &ltsl Win Win
+        &lt Nav ESC   &lly Nav A  &llm LALT R &llm LSHFT S     &llm LCTRL T  &lly tmux G /**/  &kp M      &rrm LCTRL N  &rrm LSHFT E   &rrm LALT I &kp O      &lt SFu DOUBLE_QUOTES
+        &kp LC(SPACE) &kp Z       &kp X       &kp C            &kp D         &kp V       /**/  &kp K      &kp H         &kp COMMA      &kp DOT     &kp MINUS  &none
+                &ltsl Fun Fun           &lt Num BSPC           &kp SPACE                 /**/  &ltsl Sym Sym     &key_repeat     &msk LSHFT LSHFT         
         >;
         };
 
@@ -239,6 +320,14 @@
         &trans     &kp LSHFT  &kp LG(LEFT)  &kp LG(DOWN) &kp LG(RIGHT) &trans /**/ &trans    &kp LG(N4)  &kp LG(N5)    &kp LG(N6)    &trans     &trans
         &trans     &trans     &trans        &trans       &trans        &trans /**/ &trans    &kp LG(N1)  &kp LG(N2)    &kp LG(N3)    &trans     &trans
                                         &trans     &trans   &trans           /**/   &trans    &trans     &trans
+        >;
+        };
+                tmux_layer {// layer 7
+                        bindings = <
+        &trans     &trans     &trans     &trans     &trans     &trans       /**/ &trans     &trans     &trans  &tmux_y     &trans    &trans
+        &trans     &trans     &trans     &trans     &trans     &trans       /**/ &tmux_left &tmux_cycl &trans  &tmux_right &tmux_z   &trans
+        &trans     &trans     &trans     &trans     &trans     &trans       /**/ &trans     &trans     &trans  &tmux_pipe  &tmux_bar &trans
+                                        &trans     &tmux_xy   &kp LC(SPACE) /**/   &tmux_c     &trans     &trans
         >;
         };
     };
