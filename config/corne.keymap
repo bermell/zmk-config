@@ -265,7 +265,7 @@
                 default_layer {// layer 0
                         bindings = <
         &kp TAB       &kp Q       &lly Win W  &kp F            &lly Num P    &kp B       /**/  &kp J      &rry Num L    &kp U          &rry Win Y  &kp SQT    &ltsl Win Win
-        &lt Nav ESC   &lly Nav A  &llm LALT R &llm LSHFT S     &llm LCTRL T  &lly tmux G /**/  &kp M      &rrm LCTRL N  &rrm LSHFT E   &rrm LALT I &kp O      &lt SFu DOUBLE_QUOTES
+        &lt Nav ESC   &lly Nav A  &lly Win R  &llm LSHFT S     &llm LCTRL T  &lly tmux G /**/  &kp M      &rrm LCTRL N  &rrm LSHFT E   &rrm LALT I &kp O      &lt SFu DOUBLE_QUOTES
         &kp LC(SPACE) &kp Z       &kp X       &kp C            &kp D         &kp V       /**/  &kp K      &kp H         &kp COMMA      &kp DOT     &kp MINUS  &none
                 &ltsl Fun Fun           &lt Num BSPC           &kp SPACE                 /**/  &ltsl Sym Sym     &key_repeat     &msk LSHFT LSHFT         
         >;
@@ -274,7 +274,7 @@
                 nav_layer {// layer 1
                         bindings = <
         &trans &trans   &trans &kp LC(MINUS) &kp LC(PLUS) &trans       /**/ &kp LC(LEFT) &kp PGDN   &kp PGUP   &kp LC(RIGHT) &trans     &m_au
-        &trans &kp LGUI &trans &kp LSHFT     &kp LCTRL    &trans       /**/ &kp LEFT     &kp DOWN   &kp UP     &kp RIGHT     &trans     &m_eh
+        &trans &kp LGUI &trans &kp LSHFT     &kp LCTRL    &trans       /**/ &kp LEFT     &kp DOWN   &kp UP     &kp RIGHT     &kp RET    &m_eh
         &trans &trans   &trans &trans        &trans       &kp LC(LEFT) /**/ &kp DOWN     &trans     &trans     &trans        &trans     &m_oo
                    &kp LS(F10)     &kp BSPC     &kp SPACE              /**/   &kp RET     &trans     &trans
         >;
@@ -316,16 +316,16 @@
         };
                 window_layer {// layer 6
                         bindings = <
-        &trans     &trans     &trans        &kp LG(UP)   &trans        &trans /**/ &trans    &kp LG(N7)  &kp LG(N8)    &kp LG(N9)    &trans     &trans
-        &trans     &kp LSHFT  &kp LG(LEFT)  &kp LG(DOWN) &kp LG(RIGHT) &trans /**/ &trans    &kp LG(N4)  &kp LG(N5)    &kp LG(N6)    &trans     &trans
-        &trans     &trans     &trans        &trans       &trans        &trans /**/ &trans    &kp LG(N1)  &kp LG(N2)    &kp LG(N3)    &trans     &trans
+        &trans     &trans     &trans        &kp LG(UP)   &trans        &trans /**/ &trans          &kp LG(N7)  &kp LG(N8)    &kp LG(N9)    &trans      &trans
+        &trans     &kp LSHFT  &kp LG(LEFT)  &kp LG(DOWN) &kp LG(RIGHT) &trans /**/ &kp LC(LS(TAB)) &kp LG(N1)  &kp LG(N2)    &kp LG(N3)    &kp LC(TAB) &trans
+        &trans     &trans     &trans        &trans       &trans        &trans /**/ &trans          &kp LG(N4)  &kp LG(N5)    &kp LG(N6)    &trans      &trans
                                         &trans     &trans   &trans           /**/   &trans    &trans     &trans
         >;
         };
                 tmux_layer {// layer 7
                         bindings = <
         &trans     &trans     &trans     &trans     &trans     &trans       /**/ &trans     &trans     &trans  &tmx_y     &trans    &trans
-        &trans     &trans     &trans     &trans     &trans     &trans       /**/ &tmx_left &tmx_cycl &trans  &tmx_right &tmx_z   &trans
+        &trans     &trans     &trans     &trans     &trans     &trans       /**/ &tmx_left  &tmx_cycl  &trans  &tmx_right &tmx_z   &trans
         &trans     &trans     &trans     &trans     &trans     &trans       /**/ &trans     &trans     &trans  &tmx_pipe  &tmx_bar &trans
                                         &trans     &tmx_xy   &kp LC(SPACE) /**/   &tmx_c     &trans     &trans
         >;
