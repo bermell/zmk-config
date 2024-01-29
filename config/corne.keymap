@@ -28,14 +28,14 @@
     combos {
         compatible = "zmk,combos";
         combo_k { 
-            timeout-ms = <50>;
+            timeout-ms = <30>;
             key-positions = <19 20>; // N+E 
-            bindings = <&kp K>;
+            bindings = <&sk LSHFT>;
         };
         combo_v { 
-            timeout-ms = <50>;
+            timeout-ms = <30>;
             key-positions = <15 16>; // S+T 
-            bindings = <&kp V>;
+            bindings = <&sk LSHFT>;
         };
         combo_ret_right { 
             timeout-ms = <50>;
