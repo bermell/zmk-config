@@ -264,7 +264,7 @@
                 compatible = "zmk,keymap";
                 default_layer {// layer 0
                         bindings = <
-        &kp TAB       &kp Q       &lly Win W  &kp F            &lly Num P    &kp B       /**/  &kp J      &rry Num L    &kp U          &rry Win Y  &kp SQT    &ltsl Win Win
+        &kp TAB       &kp Q       &llm LALT W &kp F            &lly Num P    &kp B       /**/  &kp J      &rry Num L    &kp U          &rry Win Y  &kp SQT    &none
         &lt Nav ESC   &lly Nav A  &lly Win R  &llm LSHFT S     &llm LCTRL T  &lly tmux G /**/  &kp M      &rrm LCTRL N  &rrm LSHFT E   &rrm LALT I &kp O      &lt SFu DOUBLE_QUOTES
         &kp LC(SPACE) &kp Z       &kp X       &kp C            &kp D         &kp V       /**/  &kp K      &kp H         &kp COMMA      &kp DOT     &kp MINUS  &none
                 &ltsl Fun Fun           &lt Num BSPC           &kp SPACE                 /**/  &ltsl Sym Sym    &msk LSHFT LSHFT  &key_repeat       
@@ -273,7 +273,7 @@
 
                 nav_layer {// layer 1
                         bindings = <
-        &trans &trans   &trans   &kp LC(MINUS) &kp LC(PLUS) &trans       /**/ &kp LC(LEFT) &kp PGDN   &kp PGUP   &kp LC(RIGHT) &trans     &m_au
+        &trans &trans   &kp LALT &kp LC(MINUS) &kp LC(PLUS) &trans       /**/ &kp LC(LEFT) &kp PGDN   &kp PGUP   &kp LC(RIGHT) &trans     &m_au
         &trans &kp LGUI &kp LALT &kp LSHFT     &kp LCTRL    &trans       /**/ &kp LEFT     &kp DOWN   &kp UP     &kp RIGHT     &kp RET    &m_eh
         &trans &trans   &trans   &trans        &trans       &kp LC(LEFT) /**/ &kp DOWN     &trans     &trans     &trans        &trans     &m_oo
                    &kp LS(F10)     &kp BSPC     &kp SPACE              /**/   &kp RET     &trans     &trans
@@ -282,27 +282,27 @@
 
                 num_layer {// layer 2
                         bindings = <
-        &trans     &kp TAB       &trans     &caps_word &kp LC(BSPC)  &sk LS(LCTRL) /**/ &m_au     &kp N7    &kp N8   &kp N9     &m_eh      &kp LG(N7)
-        &trans     &kp ESC       &trans     &sk LSHFT  &kp BSPC      &trans        /**/ &kp GRAVE &kp N4    &kp N5   &kp N6     &kp N0     &kp LG(N8)
-        &trans     &kp LC(SPACE) &kp LC(X)  &kp LC(C)  &kp LS(LC(V)) &kp LC(V)     /**/ &trans    &kp N1    &kp N2   &kp N3     &m_oo      &kp LG(N9)
+        &trans     &kp TAB       &trans     &caps_word &kp LC(BSPC)  &sk LS(LCTRL) /**/ &m_au     &kp N7    &kp N8   &kp N9     &m_eh      &none
+        &trans     &kp ESC       &trans     &sk LSHFT  &kp BSPC      &trans        /**/ &kp GRAVE &kp N4    &kp N5   &kp N6     &kp N0     &none
+        &trans     &kp LC(SPACE) &kp LC(X)  &kp LC(C)  &kp LS(LC(V)) &kp LC(V)     /**/ &trans    &kp N1    &kp N2   &kp N3     &m_oo      &none
                                         &trans     &kp BSPC   &trans               /**/   &kp RET     &kp LC(SPACE)   &trans
         >;
         };
 
                 fun_layer {// layer 3
                         bindings = <
-        &trans     &trans     &kp C_VOL_DN   &kp C_VOL_UP  &kp PSCRN    &trans /**/ &trans     &kp F7    &kp F8   &kp F9     &kp F10   &trans
-        &kp CAPS   &trans     &kp C_PREV     &kp C_PP      &kp C_NEXT   &trans /**/ &trans     &kp F4    &kp F5   &kp F6     &kp F11   &trans
-        &trans     &trans     &trans         &trans        &trans       &trans /**/ &trans     &kp F1    &kp F2   &kp F3     &kp F12   &trans
+        &trans     &trans     &kp C_VOL_DN   &kp C_VOL_UP  &kp PSCRN    &trans /**/ &trans     &kp F7    &kp F8   &kp F9     &kp F10   &none
+        &kp CAPS   &trans     &kp C_PREV     &kp C_PP      &kp C_NEXT   &trans /**/ &trans     &kp F4    &kp F5   &kp F6     &kp F11   &none
+        &trans     &trans     &trans         &trans        &trans       &trans /**/ &trans     &kp F1    &kp F2   &kp F3     &kp F12   &none
                                                   &trans     &trans     &trans /**/  &kp LS(F10)     &trans     &trans
         >;
         };
 
                 symbol_layer { // layer 4
                         bindings = <
-        &none   &kp EXCL   &kp AT     &kp HASH   &kp DOLLAR &kp PRCNT   /**/ &kp AMPS   &kp LBRC   &kp LPAR   &kp RPAR   &kp RBRC          &kp LG(N4)
-        &kp ESC &kp EQUAL  &kp PLUS   &kp STAR   &kp CARET  &kp PIPE    /**/ &kp TILDE  &kp SLASH  &kp COLON  &kp QMARK  &kp DOUBLE_QUOTES &kp LG(N5)
-        &none   &none      &none      &kp LT     &kp GT     &none       /**/ &kp SEMI   &kp UNDER  &kp LBKT   &kp RBKT   &kp BSLH          &kp LG(N6)
+        &none   &kp EXCL   &kp AT     &kp HASH   &kp DOLLAR &kp PRCNT   /**/ &kp AMPS   &kp LBRC   &kp LPAR   &kp RPAR   &kp RBRC          &none
+        &kp ESC &kp EQUAL  &kp PLUS   &kp STAR   &kp CARET  &kp PIPE    /**/ &kp TILDE  &kp SLASH  &kp COLON  &kp QMARK  &kp DOUBLE_QUOTES &none
+        &none   &none      &none      &kp LT     &kp GT     &none       /**/ &kp SEMI   &kp UNDER  &kp LBKT   &kp RBKT   &kp BSLH          &none
                                    &none   &kp DEL   &sk LSHFT   /**/   &kp RET    &caps_word   &none   
         >;
         };
