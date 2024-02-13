@@ -267,7 +267,7 @@
         &kp TAB       &kp Q       &llm LALT W &kp F            &lly Num P    &kp B       /**/  &kp J      &rry Num L    &kp U          &rry Win Y  &kp SQT    &none
         &lt Nav ESC   &lly Nav A  &lly Win R  &llm LSHFT S     &llm LCTRL T  &lly tmux G /**/  &kp M      &rrm LCTRL N  &rrm LSHFT E   &rrm LALT I &kp O      &lt SFu DOUBLE_QUOTES
         &kp LC(SPACE) &kp Z       &kp X       &kp C            &kp D         &kp V       /**/  &kp K      &kp H         &kp COMMA      &kp DOT     &kp MINUS  &none
-                &ltsl Fun Fun           &lt Num BSPC           &kp SPACE                 /**/  &ltsl Sym Sym    &msk LSHFT LSHFT  &key_repeat       
+                &ltsl Fun Fun           &lt Num BSPC           &kp SPACE                 /**/  &ltsl Sym Sym    &sk LSHFT  &key_repeat       
         >;
         };
 
