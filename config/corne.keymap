@@ -47,7 +47,7 @@
             key-positions = <3 4>; // F+P
             bindings = <&kp RET>;
         };
-        combo_ret_left { 
+        combo_ret_pinkies { 
             timeout-ms = <50>;
             key-positions = <13 22>; // A+O
             bindings = <&kp RET>;
@@ -110,7 +110,7 @@
         };
         tmx_right: tmx_right {
             label = "tmux_right";
-            bindings = <&kp LC(SPACE) &kp N> ;
+            bindings = <&kp LC(B) &kp N> ;
             compatible = "zmk,behavior-macro";
             wait-ms = <40>;
             tap-ms = <40>;
@@ -118,7 +118,7 @@
         };
         tmx_left: tmx_left {
             label = "tmux_left";
-            bindings = <&kp LC(SPACE) &kp P> ;
+            bindings = <&kp LC(B) &kp P> ;
             compatible = "zmk,behavior-macro";
             wait-ms = <40>;
             tap-ms = <40>;
@@ -126,7 +126,7 @@
         };
         tmx_cycl: tmx_cycl {
             label = "tmux_cycl";
-            bindings = <&kp LC(SPACE) &kp O> ;
+            bindings = <&kp LC(B) &kp O> ;
             compatible = "zmk,behavior-macro";
             wait-ms = <40>;
             tap-ms = <40>;
@@ -134,7 +134,7 @@
         };
         tmx_z: tmx_z {
             label = "tmux_z";
-            bindings = <&kp LC(SPACE) &kp Z> ;
+            bindings = <&kp LC(B) &kp Z> ;
             compatible = "zmk,behavior-macro";
             wait-ms = <40>;
             tap-ms = <40>;
@@ -142,7 +142,7 @@
         };
         tmx_c: tmx_c {
             label = "tmux_c";
-            bindings = <&kp LC(SPACE) &kp C> ;
+            bindings = <&kp LC(B) &kp C> ;
             compatible = "zmk,behavior-macro";
             wait-ms = <40>;
             tap-ms = <40>;
@@ -150,7 +150,7 @@
         };
         tmx_bar: tmx_bar {
             label = "tmux_bar";
-            bindings = <&kp LC(SPACE) &kp MINUS> ;
+            bindings = <&kp LC(B) &kp MINUS> ;
             compatible = "zmk,behavior-macro";
             wait-ms = <40>;
             tap-ms = <40>;
@@ -158,7 +158,7 @@
         };
         tmx_pipe: tmx_pipe {
             label = "tmux_pipe";
-            bindings = <&kp LC(SPACE) &kp PIPE> ;
+            bindings = <&kp LC(B) &kp PIPE> ;
             compatible = "zmk,behavior-macro";
             wait-ms = <40>;
             tap-ms = <40>;
@@ -166,7 +166,7 @@
         };
         tmx_xy: tmx_xy {
             label = "tmux_xy";
-            bindings = <&kp LC(SPACE) &kp X &kp Y> ;
+            bindings = <&kp LC(B) &kp X &kp Y> ;
             compatible = "zmk,behavior-macro";
             wait-ms = <40>;
             tap-ms = <40>;
@@ -174,7 +174,7 @@
         };
         tmx_y: tmx_y {
             label = "tmux_y";
-            bindings = <&kp LC(SPACE) &kp Y> ;
+            bindings = <&kp LC(B) &kp Y> ;
             compatible = "zmk,behavior-macro";
             wait-ms = <40>;
             tap-ms = <40>;
@@ -182,7 +182,7 @@
         };
 //        tmx_: tmx_ {
 //            label = "tmux_";
-//            bindings = <&kp LC(SPACE) &kp _> ;
+//            bindings = <&kp LC(B) &kp _> ;
 //            compatible = "zmk,behavior-macro";
 //            wait-ms = <40>;
 //            tap-ms = <40>;
