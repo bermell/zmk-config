@@ -47,15 +47,21 @@
             key-positions = <3 4>; // F+P
             bindings = <&kp RET>;
         };
+        combo_ret_left { 
+            timeout-ms = <50>;
+            key-positions = <13 22>; // A+O
+            bindings = <&kp RET>;
+        };
+
         combo_tmux_prefix_right {
             timeout-ms = <50>;
             key-positions = <19 38>; // Ret+N
-            bindings = <&kp LC(SPACE)>;
+            bindings = <&kp LC(B)>;
         };
         combo_tmux_prefix_left {
             timeout-ms = <50>;
             key-positions = <16 38>; // Space+T
-            bindings = <&kp LC(SPACE)>;
+            bindings = <&kp LC(B)>;
         };
         combo_bootloader_right {
             timeout-ms = <50>;
