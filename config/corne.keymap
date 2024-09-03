@@ -81,31 +81,31 @@
         m_au: m_au {
             label = "macro_swedish_au";
             compatible = "zmk,behavior-macro";
-            wait-ms = <40>;
-            tap-ms = <40>;
+            wait-ms = <20>;
+            tap-ms = <20>;
             #binding-cells = <0>;
             bindings
-                = <&kp SCROLLLOCK &kp O &kp A>
+                = <&kp RALT &kp O &kp A>
                 ;
         };
         m_eh: m_eh {
             label = "macro_swedish_eh";
             compatible = "zmk,behavior-macro";
-            wait-ms = <40>;
-            tap-ms = <40>;
+            wait-ms = <20>;
+            tap-ms = <20>;
             #binding-cells = <0>;
             bindings
-                = <&kp SCROLLLOCK &kp DOUBLE_QUOTES &kp A>
+                = <&kp RALT &kp DOUBLE_QUOTES &kp A>
                 ;
         };
         m_oo: m_oo {
             label = "macro_swedish_oo";
             compatible = "zmk,behavior-macro";
-            wait-ms = <40>;
-            tap-ms = <40>;
+            wait-ms = <20>;
+            tap-ms = <20>;
             #binding-cells = <0>;
             bindings
-                = <&kp SCROLLLOCK &kp DOUBLE_QUOTES &kp O>
+                = <&kp RALT &kp DOUBLE_QUOTES &kp O>
                 ;
         };
         tmx_right: tmx_right {
