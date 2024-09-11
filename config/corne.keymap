@@ -16,12 +16,12 @@
 #define tmux 7
 
 &sk {
-    release-after-ms = <500>;
+    release-after-ms = <800>;
     quick-release;
 };
 
 &sl {
-    release-after-ms = <500>;
+    release-after-ms = <800>;
   };
 
 / {
@@ -180,14 +180,6 @@
             tap-ms = <40>;
             #binding-cells = <0>;
         };
-//        tmx_: tmx_ {
-//            label = "tmux_";
-//            bindings = <&kp LC(B) &kp _> ;
-//            compatible = "zmk,behavior-macro";
-//            wait-ms = <40>;
-//            tap-ms = <40>;
-//            #binding-cells = <0>;
-//        };
     };
 
     behaviors {
