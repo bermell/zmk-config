@@ -166,7 +166,7 @@
         };
         tmx_xy: tmx_xy {
             label = "tmux_xy";
-            bindings = <&kp LC(B) &kp X &kp Y> ;
+            bindings = <&kp LC(B) &kp X> ;
             compatible = "zmk,behavior-macro";
             wait-ms = <40>;
             tap-ms = <40>;
