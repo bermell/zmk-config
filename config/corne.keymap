@@ -52,29 +52,12 @@
             key-positions = <13 22>; // A+O
             bindings = <&kp RET>;
         };
+        combo_ret_thumbs { 
+            timeout-ms = <50>;
+            key-positions = <38 39>; // first right thumb key + first left thumb key
+            bindings = <&kp RET>;
+        };
 
-        combo_tmux_prefix_right {
-            timeout-ms = <50>;
-            key-positions = <19 38>; // Ret+N
-            bindings = <&kp LC(B)>;
-        };
-        combo_tmux_prefix_left {
-            timeout-ms = <50>;
-            key-positions = <16 38>; // Space+T
-            bindings = <&kp LC(B)>;
-        };
-        combo_bootloader_right {
-            timeout-ms = <50>;
-            layers = <SFu>;
-            key-positions = <6 7>; // J+L
-            bindings = <&bootloader>;
-        };
-        combo_bootloader_left {
-            timeout-ms = <50>;
-            layers = <Nav>;
-            key-positions = <4 5>; // P+B
-            bindings = <&bootloader>;
-        };
     };
 
     macros {
@@ -301,7 +284,7 @@
         &none   &kp EXCL   &kp AT     &kp HASH   &kp DOLLAR &kp PRCNT   /**/ &kp AMPS   &kp LBRC   &kp LPAR   &kp RPAR   &kp RBRC          &none
         &kp ESC &kp EQUAL  &kp PLUS   &kp STAR   &kp CARET  &kp PIPE    /**/ &kp TILDE  &kp SLASH  &kp COLON  &kp QMARK  &kp DOUBLE_QUOTES &none
         &none   &none      &none      &kp LT     &kp GT     &none       /**/ &kp SEMI   &kp UNDER  &kp LBKT   &kp RBKT   &kp BSLH          &none
-                                   &none   &kp DEL   &sk LSHFT   /**/   &kp RET    &caps_word   &none   
+                                   &none   &kp DEL   &kp RET            /**/ &kp RET    &caps_word   &none   
         >;
         };
                 sec_func_layer {// layer 5
