@@ -256,14 +256,14 @@
                         bindings = <
         &trans &trans   &kp LALT &kp LC(MINUS) &kp LC(PLUS) &trans       /**/ &kp LC(LEFT) &kp PGDN   &kp PGUP   &kp LC(RIGHT) &trans     &m_au
         &trans &kp LGUI &kp LALT &kp LSHFT     &kp LCTRL    &trans       /**/ &kp LEFT     &kp DOWN   &kp UP     &kp RIGHT     &kp RET    &m_eh
-        &trans &trans   &trans   &trans        &trans       &kp LC(LEFT) /**/ &kp DOWN     &trans     &trans     &trans        &trans     &m_oo
-                   &kp LS(F10)     &kp BSPC     &kp SPACE              /**/   &kp RET     &trans     &trans
+        &trans &trans   &trans   &trans        &trans       &kp LC(LEFT) /**/ &kp HOME     &trans     &trans     &kp END       &trans     &m_oo
+                   &kp LS(F10)     &kp BSPC     &kp SPACE                /**/   &kp RET     &trans     &trans
         >;
         };
 
                 num_layer {// layer 2
                         bindings = <
-        &trans     &kp TAB       &trans     &caps_word &kp LC(BSPC)  &sk LS(LCTRL) /**/ &m_au     &kp N7    &kp N8   &kp N9     &m_eh      &none
+        &trans     &kp TAB       &trans     &caps_word &sk LS(LCTRL) &sk LS(LCTRL) /**/ &m_au     &kp N7    &kp N8   &kp N9     &m_eh      &none
         &trans     &kp ESC       &trans     &sk LSHFT  &kp BSPC      &trans        /**/ &kp GRAVE &kp N4    &kp N5   &kp N6     &kp N0     &none
         &trans     &kp LC(SPACE) &kp LC(X)  &kp LC(C)  &kp LS(LC(V)) &kp LC(V)     /**/ &trans    &kp N1    &kp N2   &kp N3     &m_oo      &none
                                         &trans     &kp BSPC   &trans               /**/   &kp RET     &kp LC(SPACE)   &trans
@@ -281,10 +281,10 @@
 
                 symbol_layer { // layer 4
                         bindings = <
-        &none   &kp EXCL   &kp AT     &kp HASH   &kp DOLLAR &kp PRCNT   /**/ &kp AMPS   &kp LBRC   &kp LPAR   &kp RPAR   &kp RBRC          &none
-        &kp ESC &kp EQUAL  &kp PLUS   &kp STAR   &kp CARET  &kp PIPE    /**/ &kp TILDE  &kp SLASH  &kp COLON  &kp QMARK  &kp DOUBLE_QUOTES &none
-        &none   &none      &none      &kp LT     &kp GT     &none       /**/ &kp SEMI   &kp UNDER  &kp LBKT   &kp RBKT   &kp BSLH          &none
-                                   &none   &kp DEL   &kp RET            /**/ &kp RET    &caps_word   &none   
+        &none  &kp EXCL   &kp AT     &kp HASH   &kp DOLLAR &kp PRCNT   /**/ &kp AMPS   &kp LBRC   &kp LPAR   &kp RPAR   &kp RBRC          &none
+        &none  &kp EQUAL  &kp PLUS   &kp STAR   &kp CARET  &kp PIPE    /**/ &kp TILDE  &kp SLASH  &kp COLON  &kp QMARK  &kp DOUBLE_QUOTES &none
+        &none  &kp ESC    &kp TAB    &kp LT     &kp GT     &none       /**/ &kp SEMI   &kp UNDER  &kp LBKT   &kp RBKT   &kp BSLH          &none
+                                   &none   &kp DEL   &kp RET           /**/ &kp RET    &caps_word   &none
         >;
         };
                 sec_func_layer {// layer 5
