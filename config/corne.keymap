@@ -17,6 +17,8 @@
 #define Win 6
 #define tmux 7
 #define Win2 8
+#define Game 9
+#define GNum 10
 
 &sk {
     release-after-ms = <800>;
@@ -99,6 +101,17 @@
           };
 
 
+        // Game layer thumb: hold = GNum layer, tap = backspace (for chat).
+        // hold-preferred so thumb+key resolves to the layer instantly.
+        gnum: game_num_layer_tap {
+            compatible = "zmk,behavior-hold-tap";
+            label = "GAME_NUM_LAYER_TAP";
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            flavor = "hold-preferred";
+            bindings = <&mo>, <&kp>;
+        };
+
         msk: mod_sticky_key {
             compatible = "zmk,behavior-hold-tap"; 
             label = "SOMETHING";
@@ -163,7 +176,7 @@
                         display-name = "Adj";
                         bindings = <
         &sys_reset  &none   &none   &none      &none      &none     /**/ &none      &kp LA(N7)  &kp LA(N8)  &kp LA(N9)  &bt BT_SEL 0  &sys_reset
-        &none       &none   &none   &kp LSHFT  &kp LCTRL  &none     /**/ &none      &kp LA(N4)  &kp LA(N5)  &kp LA(N6)  &bt BT_SEL 1  &bt BT_SEL 2
+        &none       &none   &none   &kp LSHFT  &kp LCTRL  &none     /**/ &tog Game  &kp LA(N4)  &kp LA(N5)  &kp LA(N6)  &bt BT_SEL 1  &bt BT_SEL 2
         &bootloader &none   &none   &none      &kp LGUI   &kp LALT  /**/ &bt BT_CLR &kp LA(N1)  &kp LA(N2)  &kp LA(N3)  &bt BT_SEL 3  &bootloader
                                         &none      &none    &none  /**/   &out OUT_TOG   &bt BT_CLR_ALL    &none
         >;
@@ -193,6 +206,24 @@
         &trans &trans &trans &trans &trans &trans /**/ &trans &kp LA(LS(LEFT)) &kp LC(LA(LS(LEFT)))  &kp LC(LA(LS(RIGHT))) &kp LA(LS(RIGHT))  &trans
         &trans &trans &trans &trans &trans &trans /**/ &trans &trans           &trans                &trans                &trans             &trans
                                         &trans     &trans   &trans /**/   &trans   &trans   &trans
+        >;
+        };
+                game_layer {
+                        display-name = "Game";
+                        bindings = <
+        &kp TAB    &kp Q   &kp W   &kp F   &kp P   &kp B   /**/ &trans &trans &trans &trans &trans &trans
+        &kp LSHFT  &kp A   &kp R   &kp S   &kp T   &kp G   /**/ &trans &trans &trans &trans &trans &trans
+        &kp LCTRL  &kp Z   &kp X   &kp C   &kp D   &kp V   /**/ &trans &trans &trans &trans &trans &trans
+                       &kp LALT  &gnum GNum BSPC  &kp SPACE /**/ &trans &trans &trans
+        >;
+        };
+                game_num_layer {
+                        display-name = "GNum";
+                        bindings = <
+        &kp ESC    &kp N1  &kp N2  &trans  &kp N3  &kp N4    /**/ &trans &trans &trans &trans &trans &trans
+        &trans     &kp N5  &trans  &trans  &trans  &kp N6    /**/ &trans &trans &trans &trans &trans &trans
+        &trans     &kp N7  &kp N8  &kp N9  &kp N0  &kp MINUS /**/ &trans &trans &trans &trans &trans &trans
+                                &trans   &trans   &trans     /**/ &trans &trans &trans
         >;
         };
     };
